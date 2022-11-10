@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Swiper DEMO</title>
+
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper@8/swiper.min.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
+
+    :root {
+      --easing: cubic-bezier(.2, 1, .2, 1);
+      --transition: .8s var(--easing);
+      --color-base: #f8f8f8;
+      --color-gray: #ddd;
+      --color-theme: #f5695f;
+      --color-theme-darken: #f12617;
+      --box-shadow: .8rem .8rem 1.2rem rgba(0, 0, 0, .05), -.8rem -.8rem 1.2rem #fff;
+      --box-shadow-hover: 1rem 1rem 1.5rem rgba(0, 0, 0, .08), -1rem -1rem 1.5rem #fff;
+      --box-shadow-inset: inset .8rem .8rem 1.2rem rgba(0, 0, 0, .05), inset -.8rem -.8rem 1.2rem #fff;
+      --box-shadow-dark: .8rem .8rem 1.2rem rgba(0, 0, 0, .1), -.8rem -.8rem 1.2rem rgba(#fff, .2);
+    }
+
+    html {
+      font-family: "Spartan", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;
+      font-size: 62.5%;
+      line-height: 1.8;
+      height: 100%;
+      word-break: break-word;
+      color: #333;
+      background-color: var(--color-base);
+      -webkit-appearance: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-size: 1.6rem;
+      margin: 0;
+    }
+
+    *,
+    *::before,
+    *::after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    ::-moz-selection {
+      color: #fff;
+      background: var(--color-theme);
+    }
+
+    ::selection {
+      color: #fff;
+      background: var(--color-theme);
+    }
+
+    img {
+      border: 0;
+      margin: 0;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 1.6rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      display: block;
+    }
+
+    .l-inner {
+      position: relative;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 10rem;
+    }
+
+    .l-section {
+      border-top: 1px solid #eee;
+    }
+
+    .l-section .l-inner {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+
+    [class*=swiper]:focus {
+      outline: none;
+    }
+
+    .slide-media,
+    .thumb-media {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-media img,
+    .thumb-media img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: grid;
+      place-content: center;
+      width: 6.4rem;
+      height: 6.4rem;
+      cursor: pointer;
+      -webkit-transition: var(--transition);
+      transition: var(--transition);
+    }
+
+    .swiper-button-prev::before,
+    .swiper-button-next::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      border-radius: 50%;
+      -webkit-box-shadow: var(--box-shadow);
+      box-shadow: var(--box-shadow);
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      width: 1.2rem;
+      height: 1.2rem;
+      content: "";
+      border: solid var(--color-gray);
+      border-width: 3px 3px 0 0;
+    }
+
+    .swiper-button-prev::after {
+      margin-left: 0.4rem;
+      -webkit-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+    }
+
+    .swiper-button-next::after {
+      margin-right: 0.4rem;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .swiper-button-disabled {
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .mv02 {
+      margin-bottom: 16rem;
+    }
+
+    .mv02 .l-inner {
+      padding-bottom: 0;
+    }
+
+    .mv02 .swiper-pagination {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      height: -webkit-max-content;
+      height: -moz-max-content;
+      height: max-content;
+      margin: auto;
+    }
+
+    .mv02 .swiper-pagination-bullet {
+      display: block;
+      width: 1.6rem;
+      height: 2px;
+      cursor: pointer;
+      -webkit-transition: var(--transition);
+      transition: var(--transition);
+      background-color: #fff;
+    }
+
+    .mv02 .swiper-pagination-bullet:not(:first-child) {
+      margin-top: 1.6rem;
+    }
+
+    .mv02 .swiper-pagination-bullet-active {
+      width: 4rem;
+      background-color: var(--color-theme);
+    }
+
+    .mv02 .swiper-fade .swiper-slide {
+      -webkit-transition-property: opacity, -webkit-transform !important;
+      transition-property: opacity, -webkit-transform !important;
+      transition-property: opacity, transform !important;
+      transition-property: opacity, transform, -webkit-transform !important;
+      pointer-events: none;
+    }
+
+    .mv02 .swiper-fade .swiper-slide-active {
+      pointer-events: auto;
+    }
+
+    .mv02 .slide {
+      display: grid;
+      place-content: center;
+      height: 100vh;
+      padding: 0 8rem;
+      text-align: center;
+    }
+
+    .mv02 .slide-media {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .mv02 .slide-media img {
+      -webkit-transition: 7s 1s linear;
+      transition: 7s 1s linear;
+      -webkit-transform: translateX(-1.5%) scale(1.1);
+      transform: translateX(-1.5%) scale(1.1);
+    }
+
+    .mv02 .slide-title,
+    .mv02 .slide-text,
+    .mv02 .slide-link {
+      opacity: 1;
+    }
+
+    .mv02 .slide-title {
+      font-size: 6rem;
+      line-height: 1.1;
+      color: var(--color-theme);
+    }
+
+    .mv02 .slide-text {
+      font-size: 1.8rem;
+      margin: 4rem 0;
+      color: #fff;
+    }
+
+    .mv02 .slide-button {
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: inline-block;
+      color: var(--color-theme);
+    }
+
+    .mv02 .slide-button::before {
+      display: inline-block;
+      width: 6rem;
+      height: 1px;
+      margin: -2px 1.6rem 0 0;
+      content: "";
+      vertical-align: middle;
+      background-color: currentColor;
+    }
+
+    .mv02 .swiper-slide[class*=-active] .slide-media img {
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+      -webkit-transform: translateX(1.5%) scale(1.05);
+      transform: translateX(1.5%) scale(1.05);
+    }
+
+    @-webkit-keyframes mv02-fadeIn {
+      0% {
+        -webkit-transform: translateY(6rem);
+        transform: translateY(6rem);
+        opacity: 0;
+      }
+
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes mv02-fadeIn {
+      0% {
+        -webkit-transform: translateY(6rem);
+        transform: translateY(6rem);
+        opacity: 0;
+      }
+
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes mv02-fadeOut {
+      0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      100% {
+        -webkit-transform: translateY(-6rem);
+        transform: translateY(-6rem);
+        opacity: 0;
+      }
+    }
+
+    @keyframes mv02-fadeOut {
+      0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      100% {
+        -webkit-transform: translateY(-6rem);
+        transform: translateY(-6rem);
+        opacity: 0;
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
+      .l-inner {
+        padding: 0 4rem;
+      }
+
+      .pc {
+        display: none !important;
+      }
+
+      .mv02 {
+        margin-bottom: 8rem;
+      }
+
+      .mv02 .slide {
+        height: max(100vh, 100vw);
+      }
+
+      .mv02 .slide-title {
+        font-size: 4rem;
+      }
+
+      .mv02 .slide-text {
+        font-size: 1.6rem;
+        margin: 3.2rem 0;
+      }
+    }
+
+    @media only screen and (max-width: 599px) {
+      html {
+        font-size: 50%;
+      }
+
+      .pc-tab {
+        display: none !important;
+      }
+    }
+
+    @media only screen and (min-width: 1025px) {
+      .tab-sp {
+        display: none !important;
+      }
+    }
+
+    @media only screen and (min-width: 600px) {
+      .sp {
+        display: none !important;
+      }
+    }
+
+    .hero__clip {
+      aspect-ratio: 1/1.3;
+      z-index: 2;
+      position: absolute;
+      top: 80px;
+      right: 12vw;
+      width: 76vw;
+      margin-left: auto;
+      overflow: hidden;
+      border-radius: 38vw;
+    }
+    
+    @media only screen and (min-width: 768px) {
+      .hero__clip {
+        aspect-ratio: 1/1.45;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="l-wrapper">
+    <main>
+
+      <div id="demo12" class="mv02 l-section">
+
+        <div class="swiper hero__clip">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide">
+                <div class="slide-media img-cover"><img src="https://picsum.photos/id/139/2400/1500" alt=""></div>
+                <h2 class="slide-title">Lorem ipsum</h2>
+                <p class="slide-text">Dolor sit amet, <br class="pc-tab">consectetur adipiscing elit.</p>
+                <p class="slide-link"><a href="#" class="slide-button">VIEW MORE</a></p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide">
+                <div class="slide-media img-cover"><img src="https://picsum.photos/id/1060/2400/1500" alt=""></div>
+                <h2 class="slide-title">Lorem ipsum</h2>
+                <p class="slide-text">Dolor sit amet, <br class="pc-tab">consectetur adipiscing elit.</p>
+                <p class="slide-link"><a href="#" class="slide-button">VIEW MORE</a></p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide">
+                <div class="slide-media img-cover"><img src="https://picsum.photos/id/1023/2400/1500" alt=""></div>
+                <h2 class="slide-title">Lorem ipsum</h2>
+                <p class="slide-text">Dolor sit amet, <br class="pc-tab">consectetur adipiscing elit.</p>
+                <p class="slide-link"><a href="#" class="slide-button">VIEW MORE</a></p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <article class="slide">
+                <div class="slide-media img-cover"><img src="https://picsum.photos/id/1047/2400/1500" alt=""></div>
+                <h2 class="slide-title">Quis nostrum<br>exercitationem</h2>
+                <p class="slide-text">Ullam corporis suscipit laboriosam, <br class="pc-tab">nisi ut aliquid ex ea commodi consequatur.</p>
+                <p class="slide-link"><a href="#" class="slide-button">VIEW MORE</a></p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide">
+                <div class="slide-media img-cover"><img src="https://picsum.photos/id/248/2400/1500" alt=""></div>
+                <h2 class="slide-title">Quis aute iure</h2>
+                <p class="slide-text">Reprehenderit in voluptate velit esse <br class="pc-tab">cillum dolore eu fugiat nulla pariatur.</p>
+                <p class="slide-link"><a href="#" class="slide-button">VIEW MORE</a></p>
+              </div>
+            </div>
+          </div><!-- /swiper-wrapper -->
+        </div><!-- /swiper -->
+
+      </div>
+
+    </main>
+  </div><!-- /wrapper -->
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    const myDelay = 7000;
+    let timer;
+
+    const switchAnimation = () => {
+      clearTimeout(timer);
+      let activeSlide = document.querySelectorAll('.mv02 .swiper-slide[class*=-active]');
+      for (let i = 0; i < activeSlide.length; i++) {
+        activeSlide[i].classList.remove('anm-finished');
+        activeSlide[i].classList.add('anm-started');
+      }
+      timer = setTimeout(() => {
+        for (let i = 0; i < activeSlide.length; i++) {
+          activeSlide[i].classList.remove('anm-started');
+          activeSlide[i].classList.add('anm-finished');
+        }
+      }, myDelay - 1000);
+    }
+
+    const finishAnimation = () => {
+      let activeSlide = document.querySelectorAll('.mv02 .swiper-slide.anm-started');
+      for (let i = 0; i < activeSlide.length; i++) {
+        activeSlide[i].classList.remove('anm-started');
+        activeSlide[i].classList.add('anm-finished');
+      }
+    }
+
+    const mySwiper = new Swiper('.mv02 .swiper', {
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+      loop: true,
+      loopAdditionalSlides: 1,
+      speed: 2000,
+      autoplay: {
+        delay: myDelay,
+        disableOnInteraction: false,
+        waitForTransition: false,
+      },
+      followFinger: false,
+      on: {
+        slideChange: () => {
+          finishAnimation();
+        },
+        slideChangeTransitionStart: () => {
+          switchAnimation();
+        },
+      }
+    });
+  </script>
+</body>
+
+</html>

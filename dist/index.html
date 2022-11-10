@@ -6,14 +6,23 @@
   <title>TailwindCss sample</title>
   <link rel="stylesheet" href="../src/styles_dev.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
 <body>
   <div id="cursor"></div>
   <div id="stalker"></div>
-
   <div class="bg-indigo-900 relative overflow-hidden h-screen">
     <img src="./assets/top1.webp" class="absolute h-full w-full object-cover" />
+  <!--<div class="bg-white relative overflow-hidden h-screen">-->
+  <!--  <div class="swiper absolute h-full w-full object-cover hero_radius">-->
+  <!--    <div class="swiper-wrapper ">-->
+  <!--      <div class="swiper-slide"><img src="./assets/top1.webp" class=" h-full w-full object-cover hero_radius" /></div>-->
+  <!--      <div class="swiper-slide"><img src="./assets/imo1.webp" class=" h-full w-full object-cover hero_radius" /></div>-->
+  <!--      <div class="swiper-slide"><img src="./assets/m3.webp" class=" h-full w-full object-cover hero_radius" /></div>-->
+  <!--    </div>-->
+  <!--  </div>-->
     <div class="inset-0 bg-black opacity-25 absolute">
     </div>
     <header class="absolute top-0 left-0 right-0 z-20">
@@ -272,6 +281,15 @@
     height: 8px;
     background: rgba(142, 57, 79, 0.75);
   }
+
+  .hero_radius {
+    border-radius: 38vw 0 0 38vw;
+    aspect-ratio: 1/1.45;
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: cubic-bezier(.83, 0, .17, 1)!important;
+  }
 </style>
 <script type="text/javascript">
   //マウスストーカー用のdivを取得
@@ -320,4 +338,23 @@
   document.addEventListener('mousemove', function(e) {
     cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
   });
+
+  const swiper = new Swiper(".swiper", {
+  effect: 'creative',
+  speed: 3000,
+  loop: true,
+  autoplay:{
+    delay:3000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 1,
+  creativeEffect: {
+    prev: {
+      translate: ["-20%", 0, -1],
+    },
+    next: {
+      translate: ["100%", 0, 0],
+    }
+  },
+});
 </script>
