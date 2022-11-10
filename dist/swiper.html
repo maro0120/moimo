@@ -417,23 +417,41 @@
     }
 
     .hero__clip {
-      aspect-ratio: 1/1.3;
+      aspect-ratio: 1/1.7;
       z-index: 2;
+      top: 7vh;
+      right: 7.5vw;
+      width: 85vw;
+      border-radius: 50vw;
       position: absolute;
-      top: 80px;
-      right: 12vw;
-      width: 76vw;
       margin-left: auto;
       overflow: hidden;
-      border-radius: 38vw;
     }
-    
+
     @media only screen and (min-width: 768px) {
       .hero__clip {
-        aspect-ratio: 1/1.45;
+        aspect-ratio: 1/1.3;
+        top: 80px;
+        right: 12vw;
+        width: 76vw;
+        border-radius: 38vw;
       }
     }
 
+    .p-index-hero {
+      aspect-ratio: 1/1.3;
+      z-index: 2;
+      position: relative;
+      padding-top: 7vh;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .p-index-hero {
+        aspect-ratio: 1/1.05;
+        padding-top: 80px;
+
+      }
+    }
   </style>
 
 </head>
@@ -442,7 +460,7 @@
   <div class="l-wrapper">
     <main>
 
-      <div id="demo12" class="mv02 l-section">
+      <div id="demo12" class="mv02 l-section p-index-hero">
 
         <div class="swiper hero__clip">
           <div class="swiper-wrapper">
