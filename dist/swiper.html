@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width">
 
   <title>Swiper DEMO</title>
-
+  <link rel="stylesheet" href="../src/styles_dev.css">
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper@8/swiper.min.css">
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
@@ -452,11 +452,125 @@
 
       }
     }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ff8095;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #ffe6ea;
+      border-radius: 5px;
+    }
+
+    #l-header {
+      z-index: 1000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+    }
+
+    #l-header #l-header__bg {
+      position: relative;
+    }
+
+    #l-header #l-header__bg>.l-header__wrapper {
+      display: flex;
+      z-index: 3;
+      position: relative;
+      flex-wrap: wrap;
+      align-items: center;
+      height: 120px;
+    }
+
+    #l-header #l-header__logo {
+      margin: 0;
+      padding: 0 0 0 30px;
+      font-size: 1rem;
+      line-height: 100%;
+      text-align: center;
+    }
+
+    #l-header #l-header__logo .l-header__logo--link {
+      padding: 15px 0;
+    }
+
+    #l-header #l-header__logo .l-header__logo--link .l-header__logo--svg {
+      fill: #898987;
+      width: 90px;
+    }
+
+    @media (min-width: 768px) {
+      #l-header #l-header__logo .l-header__logo--link .l-header__logo--svg {
+        width: 167px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      #l-gnav {
+        speak: none;
+        display: none;
+      }
+    }
+
+    #l-gnav {
+      display: block;
+      visibility: visible;
+      z-index: 1000;
+      position: fixed;
+      top: 30px;
+      right: 20px;
+      flex-basis: 0;
+      flex-grow: 1;
+      transform: translate(0) !important;
+    }
+
+    #l-gnav .l-gnav__nav {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
   </style>
 
 </head>
 
 <body>
+  <header id="l-header" role="banner" class="">
+    <div id="l-header__bg">
+      <div class="l-header__wrapper">
+        <h1 id="l-header__logo">
+          <a href="/" class="l-header__logo--link">
+            <svg role="img" aria-label="verbal and dialogue" class="l-header__logo--svg" width="140" height="62" viewBox="0 0 140 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 10 10 H 90 V 90 H 10 Z M 30 30 H 70 V 70 H 30 Z" fill-rule="evenodd" fill="rgb(147,200,254)" stroke-width="5" stroke="rgb(38,145,252)" />
+            </svg>
+          </a>
+        </h1>
+      </div>
+    </div>
+  </header>
+  <div id="l-gnav">
+    <nav>
+      <ul class="l-gnav__nav" data-overwrite="true">
+        <li class="l-gnav__item"><a href="/#p-index-about" class="l-gnav__link" data-hover-animation="About us"><span><span data-hover-animation-target="">About us</span></span></a></li>
+        <!-- <li class="l-gnav__item"><a href="/#p-index-service" class="l-gnav__link" data-hover-animation><span><span data-hover-animation-target>Service</span></span></a></li> -->
+        <li class="l-gnav__item"><a href="/#p-index-company" class="l-gnav__link" data-hover-animation="Company"><span><span data-hover-animation-target="">Company</span></span></a></li>
+        <li class="l-gnav__item"><a href="/news/" class="l-gnav__link" data-hover-animation="News"><span><span data-hover-animation-target="">News</span></span></a></li>
+        <li class="l-gnav__item"><a href="https://xn--pckua2a7gp15o89zb.com/jbn/cc237bb7ec93bd4159993b56dfd4d8c2" class="l-gnav__link" target="_blank" rel="noopener noreferrer" data-hover-animation="Recruit"><span>
+
+              <span data-hover-animation-target="">Recruit</span>
+          </a></li>
+        <li class="l-gnav__item"><a href="/contact/" class="l-gnav__link" data-window-open="" target="_blank" rel="noopener noreferrer" data-hover-animation="Contact"><span><span data-hover-animation-target="">Contact</span></span></a></li>
+      </ul>
+    </nav>
+  </div>
   <div class="l-wrapper">
     <main>
 
@@ -466,7 +580,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="slide">
-                <div class="slide-media img-cover"><img src="https://picsum.photos/id/139/2400/1500" alt=""></div>
+                <div class="slide-media img-cover"><img src="./assets/top1.webp" alt=""></div>
                 <h2 class="slide-title">Lorem ipsum</h2>
                 <p class="slide-text">Dolor sit amet, <br class="pc-tab">consectetur adipiscing elit.</p>
                 <p class="slide-link"><a href="#" class="slide-button">VIEW MORE</a></p>
@@ -474,7 +588,7 @@
             </div>
             <div class="swiper-slide">
               <div class="slide">
-                <div class="slide-media img-cover"><img src="https://picsum.photos/id/1060/2400/1500" alt=""></div>
+                <div class="slide-media img-cover"><img src="./assets/imo1.webp" alt=""></div>
                 <h2 class="slide-title">Lorem ipsum</h2>
                 <p class="slide-text">Dolor sit amet, <br class="pc-tab">consectetur adipiscing elit.</p>
                 <p class="slide-link"><a href="#" class="slide-button">VIEW MORE</a></p>
@@ -482,25 +596,9 @@
             </div>
             <div class="swiper-slide">
               <div class="slide">
-                <div class="slide-media img-cover"><img src="https://picsum.photos/id/1023/2400/1500" alt=""></div>
+                <div class="slide-media img-cover"><img src="./assets/m3.webp" alt=""></div>
                 <h2 class="slide-title">Lorem ipsum</h2>
                 <p class="slide-text">Dolor sit amet, <br class="pc-tab">consectetur adipiscing elit.</p>
-                <p class="slide-link"><a href="#" class="slide-button">VIEW MORE</a></p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <article class="slide">
-                <div class="slide-media img-cover"><img src="https://picsum.photos/id/1047/2400/1500" alt=""></div>
-                <h2 class="slide-title">Quis nostrum<br>exercitationem</h2>
-                <p class="slide-text">Ullam corporis suscipit laboriosam, <br class="pc-tab">nisi ut aliquid ex ea commodi consequatur.</p>
-                <p class="slide-link"><a href="#" class="slide-button">VIEW MORE</a></p>
-              </article>
-            </div>
-            <div class="swiper-slide">
-              <div class="slide">
-                <div class="slide-media img-cover"><img src="https://picsum.photos/id/248/2400/1500" alt=""></div>
-                <h2 class="slide-title">Quis aute iure</h2>
-                <p class="slide-text">Reprehenderit in voluptate velit esse <br class="pc-tab">cillum dolore eu fugiat nulla pariatur.</p>
                 <p class="slide-link"><a href="#" class="slide-button">VIEW MORE</a></p>
               </div>
             </div>
@@ -513,6 +611,7 @@
   </div><!-- /wrapper -->
 
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script>
     const myDelay = 7000;
     let timer;
@@ -563,6 +662,29 @@
         },
       }
     });
+      window.addEventListener("DOMContentLoaded", () => {
+
+        document.querySelectorAll("li.l-gnav__item").forEach((element) => {
+          // 親要素に data-overwrite 属性が適用されているかで判断
+          const useFlag = element.parentElement.dataset.overwrite === "true";
+          const overwrite = useFlag ? "auto" : false;
+
+          element.addEventListener("mouseenter", () => {
+            gsap.to(element, {
+              scale: 1.5,
+              duration: 1,
+              overwrite,
+            });
+          });
+          element.addEventListener("mouseleave", () => {
+            gsap.to(element, {
+              scale: 1.0,
+              duration: 0.5,
+              overwrite,
+            });
+          });
+        });
+      });
   </script>
 </body>
 
