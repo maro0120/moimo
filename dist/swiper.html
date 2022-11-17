@@ -551,6 +551,74 @@
       place-items: center;
       pointer-events: none;
     }
+
+    .dummy {
+      background-color: #000;
+      height: 100vh;
+    }
+
+    .c-curve-wrapper {
+      position: relative;
+      top: 145px;
+      height: 150px
+    }
+
+    @media (max-width: 991px) {
+      .c-curve-wrapper {
+        top: 95px;
+        height: 100px
+      }
+    }
+
+    .c-curve {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 140px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 991px) {
+      .c-curve {
+        height: 100px
+      }
+    }
+
+    .c-curve:before {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 150vw;
+      height: 600%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background-color: #f5f5f5;
+      content: ""
+    }
+
+    @media (max-width: 1440px) {
+      .c-curve:before {
+        height: 500%
+      }
+    }
+
+    @media (max-width: 991px) {
+      .c-curve:before {
+        height: 300%
+      }
+    }
+
+    @media (max-width: 767px) {
+      .c-curve:before {
+        height: 200%
+      }
+    }
+
+    @media (max-width: 575px) {
+      .c-curve:before {
+        height: 150%
+      }
+    }
   </style>
 
 </head>
@@ -620,12 +688,16 @@
         </div><!-- /swiper -->
 
       </div>
-
+      <div class="c-curve-wrapper" data-curve-trigger="about">
+        <div class="c-curve" style="height: 100px;"></div>
+      </div>
+      <div class="dummy">a</div>
     </main>
   </div><!-- /wrapper -->
 
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   <script>
     const myDelay = 7000;
     let timer;
@@ -705,6 +777,22 @@
       y: "100%",
       delay: 0.5,
     });
+
+    const jsCurve = document.querySelectorAll('.c-curve');
+
+    jsCurve.forEach((jsCurve, index) => {
+          gsap.to(
+            jsCurve, {
+              height: "0px",
+              scrollTrigger: {
+                trigger: jsCurve.parentElement,
+                // scroller: "[data-scroll-container]",
+                start: "top center",
+                end: "bottom top",
+                scrub: !0
+              }
+            })
+        });
   </script>
 </body>
 
