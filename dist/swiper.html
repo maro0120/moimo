@@ -538,11 +538,25 @@
       padding: 0;
       list-style: none;
     }
+
+    .c-loader-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      z-index: 1001;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+    }
   </style>
 
 </head>
 
 <body>
+  <div class="c-loader-bg"></div>
   <header id="l-header" role="banner" class="">
     <div id="l-header__bg">
       <div class="l-header__wrapper">
@@ -611,7 +625,7 @@
   </div><!-- /wrapper -->
 
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script>
     const myDelay = 7000;
     let timer;
@@ -662,29 +676,35 @@
         },
       }
     });
-      window.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("DOMContentLoaded", () => {
 
-        document.querySelectorAll("li.l-gnav__item").forEach((element) => {
-          // 親要素に data-overwrite 属性が適用されているかで判断
-          const useFlag = element.parentElement.dataset.overwrite === "true";
-          const overwrite = useFlag ? "auto" : false;
+      document.querySelectorAll("li.l-gnav__item").forEach((element) => {
+        // 親要素に data-overwrite 属性が適用されているかで判断
+        const useFlag = element.parentElement.dataset.overwrite === "true";
+        const overwrite = useFlag ? "auto" : false;
 
-          element.addEventListener("mouseenter", () => {
-            gsap.to(element, {
-              scale: 1.5,
-              duration: 1,
-              overwrite,
-            });
+        element.addEventListener("mouseenter", () => {
+          gsap.to(element, {
+            scale: 1.5,
+            duration: 1,
+            overwrite,
           });
-          element.addEventListener("mouseleave", () => {
-            gsap.to(element, {
-              scale: 1.0,
-              duration: 0.5,
-              overwrite,
-            });
+        });
+        element.addEventListener("mouseleave", () => {
+          gsap.to(element, {
+            scale: 1.0,
+            duration: 0.5,
+            overwrite,
           });
         });
       });
+    });
+    const jsLoaderBg = ".c-loader-bg";
+    const tl = gsap.timeline();
+    tl.to(jsLoaderBg, {
+      y: "100%",
+      delay: 0.5,
+    });
   </script>
 </body>
 

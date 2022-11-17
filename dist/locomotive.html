@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Locomotive-scroll</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="assets/css/locomotive-scroll.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&family=Zen+Kaku+Gothic+Antique:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="over-hidden">
+
+  <div id="load__mask"></div>
+  <div class="loader__box" id="js__loader">
+    <div class="loader__img01 loader__img">
+      <img src="assets/top1.webp" alt="">
+    </div>
+    <div class="loader__img02 loader__img">
+      <img src="assets/top1.webp" alt="">
+    </div>
+    <div class="loader__img03 loader__img">
+      <img src="assets/top1.webp" alt="">
+    </div>
+    <div class="loader__img04 loader__img">
+      <img src="assets/top1.webp" alt="">
+    </div>
+    <div class="loader__img05 loader__img">
+      <img src="assets/top1.webp" alt="">
+    </div>
+  </div>
+
+  <div class="site__main__contents" data-scroll-container>
+
+    <header class="header" id="js-header">
+      <div class="header__inner">
+        <nav>
+          <ul>
+            <li><a href="">menu01</a></li>
+            <li><a href="">menu01</a></li>
+            <li><a href="">menu01</a></li>
+            <li><a href="">menu01</a></li>
+          </ul>
+        </nav>
+        <div class="header__logo">
+          <h2>ONE SITE</h2>
+        </div>
+      </div>
+    </header>
+
+    <section class="fv" data-scroll-section data-scroll-section-id="section0">
+      <div class="fv__inner">
+        <div class="fv__ttl">
+          <h1>
+            <span class="fv-span"><span class="fv-span-01">ONE</span></span>
+            <span class="fv-span"><span class="fv-span-02">Locomotive</span></span>
+            <span class="fv-span"><span class="fv-span-03">Scroll.</span></span>
+          </h1>
+        </div>
+        <div class="fv__img">
+          <img src="assets/m3.webp" alt="" id="js-fv-img">
+        </div>
+      </div>
+    </section>
+
+    <section class="message" data-scroll-section data-scroll-section-id="section1" data-scroll-section-inview>
+      <div class="message__inner">
+        <div class="message__txt" data-scroll data-scroll-speed="2">
+          <p class="fade-up-ttl">MESSAGE</p>
+          <h3 class="fade-up-ttl">パララックスサイトを実装します</h3>
+          <h4 class="fade-up-ttl"><span>このデモサイトは、Locomotive Scrollを使用して慣性スクロールを実装しています。</span><br>
+            <span>果たして、このようなサイトを作る案件はでてくるのでしょうか。いつかモダンな技術を使用した案件に携わってみたいとおもうこの頃。</span><br>
+            <span>まあ、とりあえずこれ使いこなせるようにならないと始まらないということで、実装していきますよ。</span><br>
+            <span>てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□</span><br>
+            <span>てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□てきすと□</span>
+          </h4>
+        </div>
+        <p class="message__img message__img__01 js-message__img"><img src="assets/m3.webp" alt=""></p>
+        <p class="message__img message__img__02 js-message__img" data-scroll data-scroll-speed="1"><img src="assets/m3.webp" alt=""></p>
+      </div>
+      <div class="border"></div>
+    </section>
+
+
+    <section class="news" data-scroll-section data-scroll-section-id="section2">
+      <div class="news__inner">
+        <ul class="news__ul" data-scroll data-scroll-speed="1">
+          <li class="fade-up-ttl"><a href="">GWのお知らせ</a>
+            <p>news</p>
+            <span>2022.03.28</span>
+          </li class="fade-up-ttl">
+          <li class="fade-up-ttl"><a href="">夏季休業について</a>
+            <p>news</p>
+            <span>2022.02.20</span>
+          </li>
+          <li class="fade-up-ttl"><a href="">今後の方針</a>
+            <p>news</p>
+            <span>2022.01.22</span>
+          </li>
+        </ul>
+        <p class="news__logo" data-scroll data-scroll-speed="4">ONE SITE</p>
+      </div>
+      <div class="border"></div>
+    </section>
+
+
+    <section class="about" data-scroll-section data-scroll-section-id="section3" id="about-box">
+      <div class="about__inner">
+        <div class="about__box">
+          <div>
+            <h4 class="fade-up-ttl-02">服を着よう<br>
+              なぜなら捕まるから</h4>
+            <p class="fade-up-ttl">fashionアイテムfashionアイテムfashionアイテムfashionアイテムfashionアイテムfashionアイテムfashionアイテムfashionアイテムfashionアイテムfashionアイテムfashionアイテムfashionアイテムfashionアイテムfashionアイテムfashionアイテムfashionアイテム</p>
+          </div>
+          <p class="about__box__img js-message__img" id="fixed-img" data-scroll data-scroll-sticky data-scroll-target="#about-box"><img src="assets/m3.webp" alt=""></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product" data-scroll-section data-scroll-section-id="section4">
+      <div class="border__x"></div>
+      <div class="product__inner">
+        <div class="product__box" data-scroll data-scroll-speed="0">
+          <h5 data-scroll>promotion item</h5>
+          <p class="product__txt" data-scroll>服は着るものだ服は着るものだ服は着るものだ服は着るものだ服は着るものだ</p>
+          <p class="product__txt" data-scroll>服は着るものだ服は着るものだ服は着るものだ</p>
+          <p class="product__txt" data-scroll>服は着るものだ服は着るものだ服は着るものだ服は着るものだ</p>
+          <p class="product__sub" data-scroll>fashion item is big ootanisan fashion item is big <br>ootanisan fashion item is big ootanisan fashion item is big ootanisan fashion item is big ootanisan fashion item is big ootanisan</p>
+          <p class="product__btn" data-scroll><a href="">read more</a></p>
+        </div>
+      </div>
+      <div class="product__img js-img01">
+        <img src="assets/m3.webp" alt="">
+      </div>
+      <div class="product__img js-img02">
+        <img src="assets/m3.webp" alt="">
+      </div>
+      <div class="product__img js-img03">
+        <img src="assets/m3.webp" alt="">
+      </div>
+      <div class="product__img js-img04">
+        <img src="assets/m3.webp" alt="">
+      </div>
+      <div class="product__img js-img05">
+        <img src="assets/m3.webp" alt="">
+      </div>
+    </section>
+
+
+    <section class="works" id="works" data-scroll-section data-scroll-section-id="section5">
+      <div class="works__inner" id="works-inner-js">
+        <div class="works__contents">
+
+          <div class="works__scroll__bar" data-scroll data-scroll-sticky data-scroll-target="#works-inner-js"></div>
+
+          <div class="works__left">
+            <div class="works__left__list">
+              <article class="works__left__item" id="works__item__01">
+                <h3 class="fade-up-ttl">テスト投稿Works01<br>
+                  <span>Worksテスト</span>
+                </h3>
+              </article>
+              <article class="works__left__item" id="works__item__02">
+                <h3 class="fade-up-ttl">テスト投稿Works02<br>
+                  <span>Worksテスト</span>
+                </h3>
+              </article>
+              <article class="works__left__item" id="works__item__03">
+                <h3 class="fade-up-ttl">テスト投稿Works03<br>
+                  <span>Worksテスト</span>
+                </h3>
+              </article>
+              <article class="works__left__item" id="works__item__04">
+                <h3 class="fade-up-ttl">テスト投稿Works04<br>
+                  <span>Worksテスト</span>
+                </h3>
+              </article>
+              <article class="works__left__item" id="works__item__05">
+                <h3 class="fade-up-ttl">テスト投稿Works05<br>
+                  <span>Worksテスト</span>
+                </h3>
+              </article>
+              <article class="works__left__item" id="works__item__06">
+                <h3 class="fade-up-ttl">テスト投稿Works06<br>
+                  <span>Worksテスト</span>
+                </h3>
+              </article>
+            </div>
+          </div>
+
+          <div class="works__right">
+            <div id="works__right__js" data-scroll data-scroll-sticky data-scroll-target="#works-inner-js">
+              <div class="works__right__inner">
+                <ul class="works__right__gallery">
+                  <li id="works__right__list1" class="top__img"><img src="assets/m3.webp" alt=""></li>
+                  <li id="works__right__list2" class="top__img"><img src="assets/m3.webp" alt=""></li>
+                  <li id="works__right__list3" class="top__img"><img src="assets/m3.webp" alt=""></li>
+                  <li id="works__right__list4" class="top__img"><img src="assets/m3.webp" alt=""></li>
+                  <li id="works__right__list5" class="top__img"><img src="assets/m3.webp" alt=""></li>
+                  <li id="works__right__list6" class="top__img"><img src="assets/m3.webp" alt=""></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" data-scroll-section data-scroll data-scroll-section-id="section6" data-scroll-section-inview>
+      <div class="footer__inner" data-scroll data-scroll-speed="-7.5">
+        <p><img src="assets/m3.webp" alt="">
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="assets/js/locomotive-scroll.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+
+</html>
