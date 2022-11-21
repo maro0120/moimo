@@ -17,8 +17,8 @@
       --transition: .8s var(--easing);
       --color-base: #f8f8f8;
       --color-gray: #ddd;
-      --color-theme: #f5695f;
-      --color-theme-darken: #f12617;
+      --color-theme: #8E394F;
+      --color-theme-darken: #572331;
       --box-shadow: .8rem .8rem 1.2rem rgba(0, 0, 0, .05), -.8rem -.8rem 1.2rem #fff;
       --box-shadow-hover: 1rem 1rem 1.5rem rgba(0, 0, 0, .08), -1rem -1rem 1.5rem #fff;
       --box-shadow-inset: inset .8rem .8rem 1.2rem rgba(0, 0, 0, .05), inset -.8rem -.8rem 1.2rem #fff;
@@ -27,14 +27,15 @@
 
     html {
       font-family: "Spartan", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;
-      font-size: 62.5%;
-      line-height: 1.8;
+      /*font-size: 62.5%;*/
       height: 100%;
       word-break: break-word;
       color: #333;
       background-color: var(--color-base);
       -webkit-appearance: none;
-      -webkit-tap-highlight-color: transparent;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      line-height: 1.8
     }
 
     body {
@@ -57,6 +58,52 @@
     ::selection {
       color: #fff;
       background: var(--color-theme);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin-top: 0;
+      margin-bottom: 1rem
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 1rem;
+      font-weight: 600;
+      line-height: 1.2
+    }
+
+    h1 {
+      font-size: 1.8rem
+    }
+
+    h2 {
+      font-size: 1.5rem
+    }
+
+    h3 {
+      font-size: 1.3rem
+    }
+
+    h4 {
+      font-size: 1.2rem
+    }
+
+    h5 {
+      font-size: 1.1rem
+    }
+
+    h6 {
+      font-size: 1rem
     }
 
     img {
@@ -83,17 +130,6 @@
       margin: 0;
       padding: 0;
       list-style: none;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-size: 1.6rem;
-      margin: 0;
-      padding: 0;
     }
 
     main {
@@ -459,12 +495,12 @@
     }
 
     ::-webkit-scrollbar-thumb {
-      background: #ff8095;
+      background: #bc5872;
       border-radius: 5px;
     }
 
     ::-webkit-scrollbar-track {
-      background: #ffe6ea;
+      background: #d28fa0;
       border-radius: 5px;
     }
 
@@ -545,7 +581,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #000;
+      background-color: var(--color-theme);
       z-index: 1001;
       display: grid;
       place-items: center;
@@ -553,8 +589,8 @@
     }
 
     .dummy {
-      background-color: #000;
-      height: 100vh;
+      background-color: var(--color-theme);
+      height: 130vh;
     }
 
     .c-curve-wrapper {
@@ -592,7 +628,7 @@
       height: 600%;
       transform: translateX(-50%);
       border-radius: 50%;
-      background-color: #f5f5f5;
+      background-color: var(--color-base);
       content: ""
     }
 
@@ -616,6 +652,74 @@
 
     @media (max-width: 575px) {
       .c-curve:before {
+        height: 150%
+      }
+    }
+
+    .dummy-w {
+      background-color: var(--color-base);
+      height: 130vh;
+    }
+
+    .w-curve-wrapper {
+      position: relative;
+      /*top: 145px;*/
+      height: 150px
+    }
+
+    @media (max-width: 991px) {
+      .w-curve-wrapper {
+        /*top: 95px;*/
+        height: 100px
+      }
+    }
+
+    .w-curve {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 140px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 991px) {
+      .w-curve {
+        height: 100px
+      }
+    }
+
+    .w-curve:before {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 150vw;
+      height: 600%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background-color: var(--color-theme);
+      content: ""
+    }
+
+    @media (max-width: 1440px) {
+      .w-curve:before {
+        height: 500%
+      }
+    }
+
+    @media (max-width: 991px) {
+      .w-curve:before {
+        height: 300%
+      }
+    }
+
+    @media (max-width: 767px) {
+      .c-curve:before {
+        height: 200%
+      }
+    }
+
+    @media (max-width: 575px) {
+      .w-curve:before {
         height: 150%
       }
     }
@@ -691,7 +795,19 @@
       <div class="c-curve-wrapper" data-curve-trigger="about">
         <div class="c-curve" style="height: 100px;"></div>
       </div>
-      <div class="dummy">a</div>
+      <div class="dummy"><h1 style="padding-top:10vh;">a</h1></div>
+      <div class="w-curve-wrapper" data-curve-trigger="about">
+        <div class="w-curve" style="height: 100px;"></div>
+      </div>
+      <div class="dummy-w"><h1 style="padding-top:10vh;">b</h1></div>
+      <div class="c-curve-wrapper" data-curve-trigger="about">
+        <div class="c-curve" style="height: 100px;"></div>
+      </div>
+      <div class="dummy"><h1 style="padding-top:10vh;">c</h1></div>
+      <div class="w-curve-wrapper" data-curve-trigger="about">
+        <div class="w-curve" style="height: 100px;"></div>
+      </div>
+      <div class="dummy-w"><h1 style="padding-top:10vh;">d</h1></div>
     </main>
   </div><!-- /wrapper -->
 
@@ -781,18 +897,33 @@
     const jsCurve = document.querySelectorAll('.c-curve');
 
     jsCurve.forEach((jsCurve, index) => {
-          gsap.to(
-            jsCurve, {
-              height: "0px",
-              scrollTrigger: {
-                trigger: jsCurve.parentElement,
-                // scroller: "[data-scroll-container]",
-                start: "top center",
-                end: "bottom top",
-                scrub: !0
-              }
-            })
-        });
+      gsap.to(
+        jsCurve, {
+          height: "0px",
+          scrollTrigger: {
+            trigger: jsCurve.parentElement,
+            // scroller: "[data-scroll-container]",
+            start: "top center",
+            end: "bottom top",
+            scrub: !0
+          }
+        })
+    });
+    const wCurve = document.querySelectorAll('.w-curve');
+
+    wCurve.forEach((wCurve, index) => {
+      gsap.to(
+        wCurve, {
+          height: "0px",
+          scrollTrigger: {
+            trigger: wCurve.parentElement,
+            // scroller: "[data-scroll-container]",
+            start: "top center",
+            end: "bottom top",
+            scrub: !0
+          }
+        })
+    });
   </script>
 </body>
 
