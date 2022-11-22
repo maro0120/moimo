@@ -1022,9 +1022,11 @@
         display: "none"
       });
 
-    window.addEventListener("DOMContentLoaded", init);
-    window.addEventListener("resize", resize);
+    window.addEventListener("load", init);
+    window.addEventListener("load", alert());
 
+    window.addEventListener("resize", resize);
+    
     function init() {
 
       imgWidth = img.naturalWidth;
