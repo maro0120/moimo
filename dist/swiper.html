@@ -1000,7 +1000,7 @@
     //   yPercent: -50
     // });
 
-    var tl = gsap.timeline();
+    const tl = gsap.timeline();
     tl.to(circle, {
         attr: {
           r: () => radius
@@ -1022,10 +1022,9 @@
         display: "none"
       });
 
-    window.addEventListener("load", init);
-    window.addEventListener("load", alert());
-
-    window.addEventListener("resize", resize);
+    // window.addEventListener("load", init);
+    // window.addEventListener("resize", resize);
+    init();
     
     function init() {
 
@@ -1057,7 +1056,7 @@
 
       gsap.set(img, { width, height });
 
-      tl.invalidate();
+      // tl.invalidate();
 
       // ScrollTrigger.refresh();
     }
