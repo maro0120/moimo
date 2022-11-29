@@ -869,7 +869,7 @@
 <body>
   <!--<div class="c-loader-bg"></div>-->
   <!--<img id="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/smile.jpg">-->
-  <header id="l-header" role="banner" class="">
+  <header id="l-header" role="banner" class="" data-scroll-header>
     <div id="l-header__bg">
       <div class="l-header__wrapper">
         <h1 id="l-header__logo">
@@ -999,7 +999,7 @@
 
 
   <script>
-    var scroll = new SmoothScroll('a[href*="#about"]', { easing: 'easeOutQuint', speed: 3000 });
+    var scroll = new SmoothScroll('a[href*="#"]', { easing: 'easeOutQuint', header: '[data-scroll-header]' });
     jQuery(document).ready(function($) {
       $('.toggle-btn').on('click', function() {
         $('.toggle-btn__line').toggleClass('active');
