@@ -21,6 +21,7 @@
       --color-gray: #ddd;
       --color-theme: #8E394F;
       --color-theme-darken: #572331;
+      --color-text-base: #333;
       --box-shadow: .8rem .8rem 1.2rem rgba(0, 0, 0, .05), -.8rem -.8rem 1.2rem #fff;
       --box-shadow-hover: 1rem 1rem 1.5rem rgba(0, 0, 0, .08), -1rem -1rem 1.5rem #fff;
       --box-shadow-inset: inset .8rem .8rem 1.2rem rgba(0, 0, 0, .05), inset -.8rem -.8rem 1.2rem #fff;
@@ -37,11 +38,12 @@
       -webkit-appearance: none;
       -webkit-text-size-adjust: 100%;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      line-height: 1.8
+      line-height: 1.8;
+      /*scroll-behavior: smooth;*/
     }
 
     body {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       margin: 0;
     }
 
@@ -550,23 +552,29 @@
       }
     }
 
-    @media (max-width: 991px) {
-      #l-gnav {
-        speak: none;
-        display: none;
-      }
-    }
+    /*@media (max-width: 991px) {*/
+    /*  #l-gnav {*/
+    /*    speak: none;*/
+    /*    display: none;*/
+    /*  }*/
+    /*}*/
 
     #l-gnav {
-      display: block;
-      visibility: visible;
-      z-index: 1000;
-      position: fixed;
-      top: 30px;
-      right: 20px;
-      flex-basis: 0;
-      flex-grow: 1;
-      transform: translate(0) !important;
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      #l-gnav {
+        display: block;
+        visibility: visible;
+        z-index: 1000;
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        flex-basis: 0;
+        flex-grow: 1;
+        transform: translate(0) !important;
+      }
     }
 
     #l-gnav .l-gnav__nav {
@@ -575,6 +583,100 @@
       margin: 0;
       padding: 0;
       list-style: none;
+    }
+
+    #s-gnav {
+      z-index: 1000;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+    }
+
+    @media (min-width: 768px) {
+      #s-gnav {
+        display: none;
+      }
+    }
+
+    /* ハンバーガーボタン
+==============================　*/
+    .toggle-btn {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      z-index: 2;
+    }
+
+    .toggle-btn__line {
+      background: var(--color-text-base);
+      display: block;
+      height: 2px;
+      position: absolute;
+      transition: transform 0.5s;
+      width: 100%;
+    }
+
+    .toggle-btn__line--top {
+      top: 3px;
+    }
+
+    .toggle-btn__line--center {
+      top: 15px;
+    }
+
+    .toggle-btn__line--bottom {
+      top: 27px;
+    }
+
+    .toggle-btn__line--top.active {
+      top: 15px;
+      transform: rotate(45deg);
+    }
+
+    .toggle-btn__line--center.active {
+      transform: scaleX(0);
+    }
+
+    .toggle-btn__line--bottom.active {
+      top: 15px;
+      transform: rotate(135deg);
+    }
+
+    /* ナビゲーションメニュー
+==============================　*/
+    .global-nav {
+      display: none;
+      position: relative;
+      background: rgba(0, 0, 0, 0.7);
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+    }
+
+    .global-nav__inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .global-nav__item {
+      margin-bottom: 30px;
+    }
+
+    .global-nav__item a {
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+
+    .global-nav__item a:hover {
+      opacity: 0.7;
     }
 
     .c-loader-bg {
@@ -782,14 +884,32 @@
   </header>
   <div id="l-gnav">
     <nav>
-      <ul class="l-gnav__nav" data-overwrite="true">
-        <li class="l-gnav__item"><a href="/#p-index-about" class="l-gnav__link"><span>モイモについて</span></a></li>
+      <ul class="l-gnav__navl-gnav" data-overwrite="true">
+        <li class="l-gnav__item"><a data-scroll href="#about" class="l-gnav__link"><span>モイモについて</span></a></li>
         <!-- <li class="l-gnav__item"><a href="/#p-index-service" class="l-gnav__link" data-hover-animation><span><span data-hover-animation-target>Service</span></span></a></li> -->
-        <li class="l-gnav__item"><a href="/#p-index-company" class="l-gnav__link"><span>商品ラインナップ</span></a></li>
-        <li class="l-gnav__item"><a href="/news/" class="l-gnav__link"><span>最新情報</span></a></li>
-        <li class="l-gnav__item"><a href="/news/" class="l-gnav__link"><span>アクセス</span></a></li>
-        <li class="l-gnav__item"><a href="/news/" class="l-gnav__link"><span>農福連携について</span></a></li>
+        <li class="l-gnav__item"><a data-scroll href="#works" class="l-gnav__link"><span>商品ラインナップ</span></a></li>
+        <li class="l-gnav__item"><a data-scroll href="/news/" class="l-gnav__link"><span>最新情報</span></a></li>
+        <li class="l-gnav__item"><a data-scroll href="/news/" class="l-gnav__link"><span>アクセス</span></a></li>
+        <li class="l-gnav__item"><a data-scroll href="/news/" class="l-gnav__link"><span>農福連携について</span></a></li>
       </ul>
+    </nav>
+  </div>
+  <div id="s-gnav">
+    <a class="toggle-btn">
+      <span class="toggle-btn__line toggle-btn__line--top"></span>
+      <span class="toggle-btn__line toggle-btn__line--center"></span>
+      <span class="toggle-btn__line toggle-btn__line--bottom"></span>
+    </a>
+
+    <nav class="global-nav">
+      <div class="global-nav__inner">
+        <ul class="global-nav__list">
+          <li class="global-nav__item"><a data-scroll href="#">TOP</a></li>
+          <li class="global-nav__item"><a data-scroll href="#about">ABOUT</a></li>
+          <li class="global-nav__item"><a data-scroll href="#works">WORKS</a></li>
+          <li class="global-nav__item"><a data-scroll href="#">CONTACT</a></li>
+        </ul>
+      </div>
     </nav>
   </div>
   <svg id="svg">
@@ -847,13 +967,13 @@
           <div class="c-curve" style="height: 100px;"></div>
         </div>
         <div class="dummy">
-          <h1 style="padding-top:10vh;">a</h1>
+          <h1 id="about" style="padding-top:10vh;">a</h1>
         </div>
         <div class="w-curve-wrapper" data-curve-trigger="about">
           <div class="w-curve" style="height: 100px;"></div>
         </div>
         <div class="dummy-w">
-          <h1 style="padding-top:10vh;">b</h1>
+          <h1 id="works" style="padding-top:10vh;">b</h1>
         </div>
         <div class="c-curve-wrapper" data-curve-trigger="about">
           <div class="c-curve" style="height: 100px;"></div>
@@ -871,10 +991,28 @@
     </div>
   </div><!-- /wrapper -->
 
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+
+
   <script>
+    var scroll = new SmoothScroll('a[href*="#about"]', { easing: 'easeOutQuint', speed: 3000 });
+    jQuery(document).ready(function($) {
+      $('.toggle-btn').on('click', function() {
+        $('.toggle-btn__line').toggleClass('active');
+        $('.global-nav').fadeToggle();
+      });
+    });
+    jQuery(document).ready(function($) {
+      $('.global-nav__item').on('click', function() {
+        $('.toggle-btn__line').toggleClass('active');
+        $('.global-nav').fadeToggle();
+      });
+    });
+
     const myDelay = 7000;
     let timer;
 
@@ -933,8 +1071,8 @@
 
         element.addEventListener("mouseenter", () => {
           gsap.to(element, {
-            scale: 1.5,
-            duration: 1,
+            scale: 1.2,
+            duration: 0.5,
             overwrite,
           });
         });
@@ -1025,7 +1163,7 @@
     // window.addEventListener("load", init);
     // window.addEventListener("resize", resize);
     init();
-    
+
     function init() {
 
       imgWidth = img.naturalWidth;
