@@ -864,27 +864,50 @@ main {
   /*opacity:0;*/
 }
 
+/*.container {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  padding: 3%;*/
+/*  gap: 5vh 5vw;*/
+/*}*/
+
+/*.flex-item {*/
+/*  flex: 1;*/
+/*}*/
+/*.flex-item-img {*/
+/*  width: 100%;*/
+/*  object-fit: contain;*/
+/*  border-radius:30px*/
+/*}*/
+
+/*.flex-item-txt {*/
+/*  color: #FFF;*/
+/*  padding: 5%;*/
+/*}*/
+
 .container {
-  display: flex;
-  flex-direction: column;
-  padding: 3%;
-  gap: 5vh 5vw;
+  position: relative;
+  height: auto;
 }
-
-.flex-item {
-  flex: 1;
+.container:before {
+    content: "";
+    display: block;
+    padding-top: 70%; /* 1:1 */
 }
-
 .flex-item-img {
-  width: 100%;
-  object-fit: contain;
-  border-radius:30px
+  position: absolute;
+  top:0;
+  left:5vw;
+  width: 50%;
+}
+.flex-item-txt {
+  width: 50%;
+  position: absolute;
+  top:10vh;
+  left:50%;
+  color: #FFF;
 }
 
-.flex-item-txt {
-  color: #FFF;
-  padding: 5%;
-}
 
 @media (min-width: 768px) {
   .container {
