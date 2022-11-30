@@ -118,7 +118,7 @@
           <div class="c-curve" style="height: 100px;"></div>
         </div>
         <div class="dummy about-wrapper">
-          <h1 id="about">a</h1>
+          <h1 id="about">モイモについて</h1>
           <div class="container">
             <div class="flex-item">
 
@@ -287,13 +287,42 @@
         })
     });
     const aboutWrapper = document.querySelector('.about-wrapper');
+    const about = document.querySelectorAll('#about');
     const aboutImg = document.querySelector('.about-img');
     const aboutTxt = document.querySelector('.about-txt');
 
+    /* 文字列を分割しspanで囲む */
+    about.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsText = '#about span';
+    gsap.fromTo(jsText, {
+      autoAlpha: 0, //ここで初期状態を設定
+      y: 30,
+    }, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      },
+      scrollTrigger: {
+        trigger: aboutWrapper, //アニメーションが始まるトリガーとなる要素
+        start: "top center",
+      }
+    });
     const tll = gsap.timeline({
       scrollTrigger: {
-        trigger: aboutImg, //アニメーションが始まるトリガーとなる要素
-        start: "top center"
+        trigger: about, //アニメーションが始まるトリガーとなる要素
+        start: "top center",
       }
     });
     tll.fromTo(aboutImg, {
@@ -310,7 +339,7 @@
       autoAlpha: 1, //ここでアニメーションさせたい内容を書く
       y: 0,
       duration: 2,
-    },'-=1');
+    }, '-=1.5');
 
     const svg = document.querySelector("#svg");
     const img = document.querySelector("#img");

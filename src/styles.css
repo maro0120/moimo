@@ -895,3 +895,6 @@ main {
     padding: 0 10vw 0 0;
   }
 }
+#about span{
+  display: inline-block;
+}
