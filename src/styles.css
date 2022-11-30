@@ -706,7 +706,7 @@ main {
 @media (max-width: 767px) {
   .dummy {
     padding-top: 95px;
-    height: 100vh;
+    height: 120vh;
   }
 
   .c-curve-wrapper {
@@ -838,6 +838,7 @@ main {
   left: 50%;
   top: 50%;
   z-index: 30;
+  white-space: nowrap;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -877,6 +878,7 @@ main {
 .flex-item-img {
   width: 100%;
   object-fit: contain;
+  border-radius:30px
 }
 
 .flex-item-txt {
