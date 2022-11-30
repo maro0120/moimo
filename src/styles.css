@@ -693,7 +693,7 @@ main {
 
 .dummy {
   background-color: var(--color-theme);
-  height: 130vh;
+  height: 100%;
   padding-top: 145px;
 }
 
@@ -706,7 +706,7 @@ main {
 @media (max-width: 767px) {
   .dummy {
     padding-top: 95px;
-    height: 120vh;
+    height: 100%;
   }
 
   .c-curve-wrapper {
@@ -767,7 +767,7 @@ main {
 
 .dummy-w {
   background-color: var(--color-base);
-  height: 130vh;
+  height: 100%;
 }
 
 .w-curve-wrapper {
