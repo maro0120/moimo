@@ -118,19 +118,18 @@
           <div class="c-curve" style="height: 100px;"></div>
         </div>
         <div class="dummy about-wrapper">
-          <h1 style="font-size:4rem;"id="about">モイモについて</h1>
+          <h1 style="font-size:4rem;" id="about">モイモについて</h1>
           <div class="container">
-            <div class="flex-item">
-
+            <!--<div class="flex-item">-->
               <img class="about-img flex-item-img" src="./assets/top1.webp" alt="">
-            </div>
-            <div class="flex-item">
+            <!--</div>-->
+            <!--<div class="flex-item">-->
               <div class="about-txt flex-item-txt">
                 <p>大地の栄養をしっかり蓄えたサツマイモを、ベストなタイミングで収穫、管理されたキュアリング貯蔵庫でじっくり熟成させた後、更にとびっきり美味しいスイーツに変身させました。
                   自慢の壷焼き芋をはじめ、焼き芋プリンやモンブラン、芋けんぴなどなど、どれをとってもモイモ自慢の美味しさです。
                   店内にはカフェスペースもご用意して皆様のお越しをスタッフ一同、お待ちしております。</p>
               </div>
-            </div>
+            <!--</div>-->
           </div>
         </div>
         <div class="w-curve-wrapper" data-curve-trigger="about">
@@ -179,7 +178,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
 
-
+<script>
+$(function(){
+    var biggestHeight = "0";
+    $(".container *").each(function(){
+        if ($(this).height() > biggestHeight ) {
+            biggestHeight = ($(this).height()+$(this).height()*0.1)
+        }
+    });
+    $(".container").height(biggestHeight);
+})
+</script>
   <script>
     var scroll = new SmoothScroll('a[href*="#"]', { easing: 'easeOutQuint', speed: 1000, header: '[data-scroll-header]' });
     jQuery(document).ready(function($) {

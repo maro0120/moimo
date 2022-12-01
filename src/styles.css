@@ -32,11 +32,13 @@ html {
   line-height: 1.8;
   /*scroll-behavior: smooth;*/
 }
+
 @media only screen and (max-width: 767px) {
   html {
     font-size: 80%;
   }
 }
+
 body {
   font-size: 1.4rem;
   margin: 0;
@@ -885,39 +887,67 @@ main {
 /*  padding: 5%;*/
 /*}*/
 
+/*.container {*/
+/*  position: relative;*/
+/*  height: auto;*/
+/*}*/
+/*.container:before {*/
+/*    content: "";*/
+/*    display: block;*/
+/*padding-top: 70%;*/
+/*}*/
+/*.flex-item-img {*/
+/*  position: absolute;*/
+/*  top:0;*/
+/*  left:5vw;*/
+/*  width: 50%;*/
+/*}*/
+/*.flex-item-txt {*/
+/*  width: 50%;*/
+/*  position: absolute;*/
+/*  top:10vh;*/
+/*  left:50%;*/
+/*  color: #FFF;*/
+/*}*/
+
+
 .container {
   position: relative;
-  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-.container:before {
-    content: "";
-    display: block;
-    padding-top: 70%; /* 1:1 */
-}
+
 .flex-item-img {
-  position: absolute;
-  top:0;
-  left:5vw;
-  width: 50%;
+  /*position: absolute;*/
+  /*top:0;*/
+  /*left:5vw;*/
+  /*width: 50%;*/
+  width: 100%;
+  padding-left:5vw;
 }
+
 .flex-item-txt {
-  width: 50%;
   position: absolute;
-  top:10vh;
-  left:50%;
+  grid-column-start: 1;
+  top: 10vh;
+  left: 40%;
   color: #FFF;
+  padding-right: 10vw;
+  z-index: 3;
+  font-size: 1.2rem;
 }
 
 
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-  }
+/*@media (min-width: 768px) {*/
+/*  .container {*/
+/*    flex-direction: row;*/
+/*  }*/
 
-  .flex-item-txt {
-    padding: 0 10vw 0 0;
-  }
-}
-#about span{
+/*  .flex-item-txt {*/
+/*    padding: 0 10vw 0 0;*/
+/*  }*/
+/*}*/
+
+#about span {
   display: inline-block;
 }
