@@ -923,7 +923,7 @@ main {
   /*left:5vw;*/
   /*width: 50%;*/
   width: 100%;
-  padding-left:5vw;
+  padding-left: 5vw;
 }
 
 .flex-item-txt {
@@ -937,6 +937,13 @@ main {
   font-size: 1.2rem;
 }
 
+@media (max-width: 767px) {
+  .flex-item-img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
 
 /*@media (min-width: 768px) {*/
 /*  .container {*/
