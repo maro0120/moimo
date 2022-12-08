@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>moimo DEMO</title>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper@8/swiper.min.css">
+  <link rel="stylesheet" href="../src/styles.1.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <header id="l-header" role="banner" class="" data-scroll-header>
+    <div id="l-header__bg">
+      <div class="l-header__wrapper">
+        <h1 id="l-header__logo">
+          <a href="/" class="l-header__logo--link">
+            <svg role="img" class="l-header__logo--svg" width="140" height="62" viewBox="0 0 140 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 10 10 H 90 V 90 H 10 Z M 30 30 H 70 V 70 H 30 Z" fill-rule="evenodd" fill="rgb(147,200,254)" stroke-width="5" stroke="rgb(38,145,252)" />
+            </svg>
+          </a>
+        </h1>
+      </div>
+    </div>
+  </header>
+  <div id="l-gnav">
+    <nav>
+      <ul class="l-gnav__navl-gnav" data-overwrite="true">
+        <li class="l-gnav__item"><a data-scroll href="#about" class="l-gnav__link"><span>モイモについて</span></a></li>
+        <li class="l-gnav__item"><a data-scroll href="#works" class="l-gnav__link"><span>商品ラインナップ</span></a></li>
+        <li class="l-gnav__item"><a data-scroll href="/news/" class="l-gnav__link"><span>最新情報</span></a></li>
+        <li class="l-gnav__item"><a data-scroll href="/news/" class="l-gnav__link"><span>アクセス</span></a></li>
+        <li class="l-gnav__item"><a data-scroll href="/news/" class="l-gnav__link"><span>農福連携について</span></a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="s-gnav">
+    <a class="toggle-btn">
+      <span class="toggle-btn__line toggle-btn__line--top"></span>
+      <span class="toggle-btn__line toggle-btn__line--center"></span>
+      <span class="toggle-btn__line toggle-btn__line--bottom"></span>
+    </a>
+    <nav class="global-nav">
+      <div class="global-nav__inner">
+        <ul class="global-nav__list">
+          <li class="global-nav__item"><a data-scroll href="#">TOP</a></li>
+          <li class="global-nav__item"><a data-scroll href="#about">ABOUT</a></li>
+          <li class="global-nav__item"><a data-scroll href="#works">Instagram</a></li>
+          <li class="global-nav__item"><a data-scroll href="#">アクセス</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <svg id="svg">
+    <defs>
+      <mask id="mask">
+        <rect width="100%" height="100%" fill="white"></rect>
+        <circle id="circle" cx="50%" cy="50%" r="60" fill="black"></circle>
+      </mask>
+    </defs>
+    <rect id="whiteLayer" width="100%" height="100%" fill="white"></rect>
+    <rect width="100%" height="100%" fill="rgb(196, 77, 108)" mask="url(#mask)"></rect>
+  </svg>
+  <div id="img">
+    <div class="hero-wrapper">
+      <div class="title-wrapper">
+        <h2 class="slide-title">moimo</h2>
+        <p class="slide-text">農園スイーツ・モイモ</p>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide">
+              <div class="slide-media"><img src="./assets/top1.webp" alt=""></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide">
+              <div class="slide-media"><img src="./assets/imo1.webp" alt=""></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide">
+              <div class="slide-media"><img src="./assets/m3.webp" alt=""></div>
+            </div>
+          </div>
+        </div><!-- /swiper-wrapper -->
+      </div><!-- /swiper -->
+    </div>
+    <div class="about-wrapper">
+      <h1>About Us</h1>
+      <h2>モイモについて</h2>
+      <div class="about-container">
+        <img class="about-img" src="./assets/top1.webp" alt="">
+        <p class="about-lead-txt"><span>自慢の壷焼き芋をはじめ、焼き芋プリンやモンブラン、芋けんぴなどなど、どれをとってもモイモ自慢の美味しさです。</span></p>
+        <p class="about-txt"><span>大地の栄養をしっかり蓄えたサツマイモを、ベストなタイミングで収穫、管理されたキュアリング貯蔵庫でじっくり熟成させた後、更にとびっきり美味しいスイーツに変身させました。</br> 店内にはカフェスペースもご用意して皆様のお越しをスタッフ一同、お待ちしております。</span></p>
+      </div>
+    </div>
+    <div class="img-box-container"><img class="img-box" src="./assets/top1.webp" alt=""></div>
+    <div class="product-wrapper">
+      <h1>About Us</h1>
+      <h2>モイモについて</h2>
+      <div class="product-container">
+        <img class="product-img" src="./assets/top1.webp" alt="">
+        <p class="about-txt">aaa</p>
+      </div>
+      <div class="product-container-left">
+        <p class="about-txt">aaa</p>
+        <img class="product-img" src="./assets/top1.webp" alt="">
+      </div>
+    </div>
+  </div><!-- #img -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', { easing: 'easeOutQuint', speed: 1000, header: '[data-scroll-header]' });
+    jQuery(document).ready(function($) {
+      $('.toggle-btn').on('click', function() {
+        $('.toggle-btn__line').toggleClass('active');
+        $('.global-nav').fadeToggle();
+      });
+    });
+    jQuery(document).ready(function($) {
+      $('.global-nav__item').on('click', function() {
+        $('.toggle-btn__line').toggleClass('active');
+        $('.global-nav').fadeToggle();
+      });
+    });
+    const svg = document.querySelector("#svg");
+    const img = document.querySelector("#img");
+    const circle = document.querySelector("#circle");
+    const content = document.querySelector("#content");
+    const whiteLayer = document.querySelector("#whiteLayer");
+    const pad = 4;
+    let radius = +circle.getAttribute("r");
+    let imgWidth, imgHeight;
+    const tl = gsap.timeline();
+    tl.to(circle, {
+      attr: {
+        r: () => radius
+      },
+      delay: 0.5,
+      ease: "power1.in",
+    }).to("#whiteLayer", {
+      alpha: 0,
+      ease: "power1.in",
+      duration: 1 - 0.25,
+      opacity: 0,
+    }, 0.25).to(svg, {
+      display: "none"
+    });
+    init();
+
+    function init() {
+      imgWidth = img.naturalWidth;
+      imgHeight = img.naturalHeight;
+      resize();
+    }
+
+    function resize() {
+      tl.progress(0);
+      const r = svg.getBoundingClientRect();
+      const rectWidth = r.width + pad;
+      const rectHeight = r.height + pad;
+      const rx = rectWidth / imgWidth;
+      const ry = rectHeight / imgHeight;
+      const ratio = Math.max(rx, ry);
+      const width = imgWidth * ratio;
+      const height = imgHeight * ratio;
+      const dx = rectWidth / 2;
+      const dy = rectHeight / 2;
+      radius = Math.sqrt(dx * dx + dy * dy);
+      gsap.set(img, { width, height });
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("li.l-gnav__item").forEach((element) => {
+        // 親要素に data-overwrite 属性が適用されているかで判断
+        const useFlag = element.parentElement.dataset.overwrite === "true";
+        const overwrite = useFlag ? "auto" : false;
+        element.addEventListener("mouseenter", () => {
+          gsap.to(element, {
+            scale: 1.2,
+            duration: 0.5,
+            overwrite,
+          });
+        });
+        element.addEventListener("mouseleave", () => {
+          gsap.to(element, {
+            scale: 1.0,
+            duration: 0.5,
+            overwrite,
+          });
+        });
+      });
+    });
+    const myDelay = 7000;
+    let timer;
+    const switchAnimation = () => {
+      clearTimeout(timer);
+      let activeSlide = document.querySelectorAll('.swiper-slide[class*=-active]');
+      for (let i = 0; i < activeSlide.length; i++) {
+        activeSlide[i].classList.remove('anm-finished');
+        activeSlide[i].classList.add('anm-started');
+      }
+      timer = setTimeout(() => {
+        for (let i = 0; i < activeSlide.length; i++) {
+          activeSlide[i].classList.remove('anm-started');
+          activeSlide[i].classList.add('anm-finished');
+        }
+      }, myDelay - 1000);
+    }
+    const finishAnimation = () => {
+      let activeSlide = document.querySelectorAll('.swiper-slide.anm-started');
+      for (let i = 0; i < activeSlide.length; i++) {
+        activeSlide[i].classList.remove('anm-started');
+        activeSlide[i].classList.add('anm-finished');
+      }
+    }
+    const mySwiper = new Swiper('.swiper', {
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+      loop: true,
+      loopAdditionalSlides: 1,
+      speed: 2000,
+      autoplay: {
+        delay: myDelay,
+        disableOnInteraction: false,
+        waitForTransition: false,
+      },
+      followFinger: false,
+      on: {
+        slideChange: () => {
+          finishAnimation();
+        },
+        slideChangeTransitionStart: () => {
+          switchAnimation();
+        },
+      }
+    });
+  </script>
+</body>
+
+</html>
