@@ -10,19 +10,14 @@
   --color-theme: #8e394f;
   --color-theme-darken: #572331;
   --color-text-base: #333;
-  --box-shadow: 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.05),
-    -0.8rem -0.8rem 1.2rem #fff;
-  --box-shadow-hover: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.08),
-    -1rem -1rem 1.5rem #fff;
-  --box-shadow-inset: inset 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.05),
-    inset -0.8rem -0.8rem 1.2rem #fff;
-  --box-shadow-dark: 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.1),
-    -0.8rem -0.8rem 1.2rem rgba(#fff, 0.2);
+  --box-shadow: 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.05), -0.8rem -0.8rem 1.2rem #fff;
+  --box-shadow-hover: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.08), -1rem -1rem 1.5rem #fff;
+  --box-shadow-inset: inset 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.05), inset -0.8rem -0.8rem 1.2rem #fff;
+  --box-shadow-dark: 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.1), -0.8rem -0.8rem 1.2rem rgba(#fff, 0.2);
 }
 
 html {
-  font-family: "Klee One", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
-    "メイリオ", Meiryo, sans-serif;
+  font-family: "Klee One", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;
   /*font-size: 62.5%;*/
   height: 100%;
   word-break: break-word;
@@ -1057,23 +1052,28 @@ a.shake:hover {
 }
 
 .product-container {
-  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
   width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
 .product-img {
   width: 50%;
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+}
+.product-img-right {
+  width: 50%;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
 }
 
 .product-container-left {
-  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
   width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-top: -6.6%;
@@ -1089,4 +1089,16 @@ a.shake:hover {
 }
 .product-item {
   width: 100%;
+}
+@media (max-width: 767px) {
+  .product-container-left {
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+  .product-img {
+    width: 100%;
+  }
+  .product-img-right {
+    width: 100%;
+  }
 }

@@ -145,7 +145,7 @@ gsap.set(conceptImg1, {
 });
 gsap.set([conceptTxt1_1, conceptTxt1_2], {
   autoAlpha: 0, //ここで初期状態を設定
-  yPercent: -100,
+  yPercent: 100,
 });
 const tlConcept = gsap.timeline({
   scrollTrigger: {
@@ -179,7 +179,7 @@ gsap.set(conceptImg2, {
 });
 gsap.set([conceptTxt2_1, conceptTxt2_2], {
   autoAlpha: 0, //ここで初期状態を設定
-  yPercent: -100,
+  yPercent: 100,
 });
 const tlConcept2 = gsap.timeline({
   scrollTrigger: {
@@ -213,7 +213,7 @@ gsap.set(conceptImg3, {
 });
 gsap.set([conceptTxt3_1, conceptTxt3_2], {
   autoAlpha: 0, //ここで初期状態を設定
-  yPercent: -100,
+  yPercent: 100,
 });
 const tlConcept3 = gsap.timeline({
   scrollTrigger: {

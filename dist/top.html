@@ -1,140 +1,154 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>moimo DEMO</title>
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper@8/swiper.min.css">
-  <link rel="stylesheet" href="../src/styles.1.css">
-  <style>
-  </style>
-</head>
-
-<body>
-  <header id="l-header" role="banner" class="" data-scroll-header>
-    <div id="l-header__bg">
-      <div class="l-header__wrapper">
-        <h1 id="l-header__logo">
-          <a href="/" class="l-header__logo--link">
-            <svg role="img" class="l-header__logo--svg" width="140" height="62" viewBox="0 0 140 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 10 10 H 90 V 90 H 10 Z M 30 30 H 70 V 70 H 30 Z" fill-rule="evenodd" fill="rgb(147,200,254)" stroke-width="5" stroke="rgb(38,145,252)" />
-            </svg>
-          </a>
-        </h1>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>moimo DEMO</title>
+    <link href="https://unpkg.com/swiper@8/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link href="../src/styles.1.css" rel="stylesheet" />
+    <style></style>
+  </head>
+  <body>
+    <header data-scroll-header="" id="l-header" role="banner">
+      <div id="l-header__bg">
+        <div class="l-header__wrapper">
+          <h1 id="l-header__logo">
+            <a class="l-header__logo--link" href="/"
+              ><svg class="l-header__logo--svg" height="62" role="img" viewbox="0 0 140 62" width="140" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 10 10 H 90 V 90 H 10 Z M 30 30 H 70 V 70 H 30 Z" fill="rgb(147,200,254)" fill-rule="evenodd" stroke="rgb(38,145,252)" stroke-width="5"></path></svg
+            ></a>
+          </h1>
+        </div>
       </div>
-    </div>
-  </header>
-  <div id="l-gnav">
-    <nav>
-      <ul class="l-gnav__navl-gnav" data-overwrite="true">
-        <li class="l-gnav__item"><a data-scroll href="#about" class="l-gnav__link"><span>モイモについて</span></a></li>
-        <li class="l-gnav__item"><a data-scroll href="#works" class="l-gnav__link"><span>商品ラインナップ</span></a></li>
-        <li class="l-gnav__item"><a data-scroll href="/news/" class="l-gnav__link"><span>最新情報</span></a></li>
-        <li class="l-gnav__item"><a data-scroll href="/news/" class="l-gnav__link"><span>アクセス</span></a></li>
-        <li class="l-gnav__item"><a data-scroll href="/news/" class="l-gnav__link"><span>農福連携について</span></a></li>
-      </ul>
-    </nav>
-  </div>
-  <div id="s-gnav">
-    <a class="toggle-btn">
-      <span class="toggle-btn__line toggle-btn__line--top"></span>
-      <span class="toggle-btn__line toggle-btn__line--center"></span>
-      <span class="toggle-btn__line toggle-btn__line--bottom"></span>
-    </a>
-    <nav class="global-nav">
-      <div class="global-nav__inner">
-        <ul class="global-nav__list">
-          <li class="global-nav__item"><a data-scroll href="#">TOP</a></li>
-          <li class="global-nav__item"><a data-scroll href="#about">ABOUT</a></li>
-          <li class="global-nav__item"><a data-scroll href="#works">Instagram</a></li>
-          <li class="global-nav__item"><a data-scroll href="#">アクセス</a></li>
+    </header>
+    <div id="l-gnav">
+      <nav>
+        <ul class="l-gnav__navl-gnav" data-overwrite="true">
+          <li class="l-gnav__item">
+            <a class="l-gnav__link" data-scroll="" href="#about"><span>モイモについて</span></a>
+          </li>
+          <li class="l-gnav__item">
+            <a class="l-gnav__link" data-scroll="" href="#works"><span>商品ラインナップ</span></a>
+          </li>
+          <li class="l-gnav__item">
+            <a class="l-gnav__link" data-scroll="" href="/news/"><span>最新情報</span></a>
+          </li>
+          <li class="l-gnav__item">
+            <a class="l-gnav__link" data-scroll="" href="/news/"><span>アクセス</span></a>
+          </li>
+          <li class="l-gnav__item">
+            <a class="l-gnav__link" data-scroll="" href="/news/"><span>農福連携について</span></a>
+          </li>
         </ul>
-      </div>
-    </nav>
-  </div>
-  <svg id="svg">
-    <defs>
-      <mask id="mask">
-        <rect width="100%" height="100%" fill="white"></rect>
-        <circle id="circle" cx="50%" cy="50%" r="60" fill="black"></circle>
-      </mask>
-    </defs>
-    <rect id="whiteLayer" width="100%" height="100%" fill="white"></rect>
-    <rect width="100%" height="100%" fill="rgb(196, 77, 108)" mask="url(#mask)"></rect>
-  </svg>
-  <div id="img">
-    <div class="hero-wrapper">
-      <div class="title-wrapper">
-        <h2 class="slide-title">moimo</h2>
-        <p class="slide-text">農園スイーツ・モイモ</p>
-      </div>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="slide">
-              <div class="slide-media"><img src="./assets/top1.webp" alt=""></div>
+      </nav>
+    </div>
+    <div id="s-gnav">
+      <a class="toggle-btn"><span class="toggle-btn__line toggle-btn__line--top"></span> <span class="toggle-btn__line toggle-btn__line--center"></span> <span class="toggle-btn__line toggle-btn__line--bottom"></span></a>
+      <nav class="global-nav">
+        <div class="global-nav__inner">
+          <ul class="global-nav__list">
+            <li class="global-nav__item">
+              <a data-scroll="" href="#">TOP</a>
+            </li>
+            <li class="global-nav__item">
+              <a data-scroll="" href="#about">ABOUT</a>
+            </li>
+            <li class="global-nav__item">
+              <a data-scroll="" href="#works">Instagram</a>
+            </li>
+            <li class="global-nav__item">
+              <a data-scroll="" href="#">アクセス</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <svg id="svg">
+      <defs>
+        <mask id="mask">
+          <rect fill="white" height="100%" width="100%"></rect>
+          <circle cx="50%" cy="50%" fill="black" id="circle" r="60"></circle>
+        </mask>
+      </defs>
+      <rect fill="white" height="100%" id="whiteLayer" width="100%"></rect>
+      <rect fill="rgb(196, 77, 108)" height="100%" mask="url(#mask)" width="100%"></rect>
+    </svg>
+    <div id="img">
+      <div class="hero-wrapper">
+        <div class="title-wrapper">
+          <h2 class="slide-title">moimo</h2>
+          <p class="slide-text">農園スイーツ・モイモ</p>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide">
+                <div class="slide-media"><img alt="" src="./assets/top1.webp" /></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide">
+                <div class="slide-media"><img alt="" src="./assets/imo1.webp" /></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide">
+                <div class="slide-media"><img alt="" src="./assets/m3.webp" /></div>
+              </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="slide">
-              <div class="slide-media"><img src="./assets/imo1.webp" alt=""></div>
-            </div>
+          <!-- /swiper-wrapper -->
+        </div>
+        <!-- /swiper -->
+      </div>
+      <div class="about-wrapper">
+        <h1>About Us</h1>
+        <h2>モイモについて</h2>
+        <div class="about-container">
+          <img alt="" class="about-img" src="./assets/hero-purin.webp" />
+          <p class="about-lead-txt"><span>自慢の壷焼き芋をはじめ、焼き芋プリンやモンブラン、芋けんぴなどなど、どれをとってもモイモ自慢の美味しさです。</span></p>
+          <p class="about-txt">
+            <span>
+              大地の栄養をしっかり蓄えたサツマイモを、ベストなタイミングで収穫、管理されたキュアリング貯蔵庫でじっくり熟成させた後、更にとびっきり美味しいスイーツに変身させました。<br />
+              店内にはカフェスペースもご用意して皆様のお越しをスタッフ一同、お待ちしております。
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="img-box-container"><img alt="" class="img-box" src="./assets/goat.webp" /></div>
+      <div class="product-wrapper">
+        <h1>Concept</h1>
+        <h2>モイモのこだわり</h2>
+        <div class="product-container">
+          <img alt="" class="product-img" id="conceptImg1" src="./assets/concept1.webp" />
+          <div class="product-item-container">
+            <h3 class="product-item" id="conceptTxt1_1">安心安全の栽培方法</h3>
+            <p class="about-txt" id="conceptTxt1_2">善玉菌を増やすため厳選した有機肥料を使用し、安心・安全・おいしいサツマイモを栽培しています</p>
           </div>
-          <div class="swiper-slide">
-            <div class="slide">
-              <div class="slide-media"><img src="./assets/m3.webp" alt=""></div>
-            </div>
+        </div>
+        <div class="product-container-left">
+          <div class="product-item-container">
+            <h3 class="product-item" id="conceptTxt2_1">徹底した熟成管理</h3>
+            <p class="about-txt" id="conceptTxt2_2">温度・湿度を管理したキュアリング貯蔵を行うことで熟成期間を延長し、より完熟で甘いサツマイモを提供しています</p>
           </div>
-        </div><!-- /swiper-wrapper -->
-      </div><!-- /swiper -->
-    </div>
-    <div class="about-wrapper">
-      <h1>About Us</h1>
-      <h2>モイモについて</h2>
-      <div class="about-container">
-        <img class="about-img" src="./assets/hero-purin.webp" alt="">
-        <p class="about-lead-txt"><span>自慢の壷焼き芋をはじめ、焼き芋プリンやモンブラン、芋けんぴなどなど、どれをとってもモイモ自慢の美味しさです。</span></p>
-        <p class="about-txt"><span>大地の栄養をしっかり蓄えたサツマイモを、ベストなタイミングで収穫、管理されたキュアリング貯蔵庫でじっくり熟成させた後、更にとびっきり美味しいスイーツに変身させました。</br> 店内にはカフェスペースもご用意して皆様のお越しをスタッフ一同、お待ちしております。</span></p>
+          <img alt="" class="product-img-right" id="conceptImg2" src="./assets/concept2.webp" />
+        </div>
+        <div class="product-container">
+          <img alt="" class="product-img" id="conceptImg3" src="./assets/concept3.webp" />
+          <div class="product-item-container">
+            <h3 class="product-item" id="conceptTxt3_1">完熟芋の加工品</h3>
+            <p class="about-txt" id="conceptTxt3_2">熟成させたサツマイモは、当店でお楽しみいただける手作りスイーツに昇格させ、さらなるおいしさを発信しています</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="img-box-container"><img class="img-box" src="./assets/goat.webp" alt=""></div>
-    <div class="product-wrapper">
-      <h1>Concept</h1>
-      <h2>モイモのこだわり</h2>
-      <div class="product-container">
-        <img class="product-img" src="./assets/concept1.webp" alt="" id="conceptImg1">
-        <div class="product-item-container">
-        <h3 class="product-item" id="conceptTxt1_1">安心安全の栽培方法</h3>
-        <p class="about-txt" id="conceptTxt1_2">善玉菌を増やすため厳選した有機肥料を使用し、安心・安全・おいしいサツマイモを栽培しています</p>
-      </div>
-      </div>
-      <div class="product-container-left">
-        <div class="product-item-container">
-        <h3 class="product-item" id="conceptTxt2_1">徹底した熟成管理</h3>
-        <p class="about-txt" id="conceptTxt2_1">温度・湿度を管理したキュアリング貯蔵を行うことで熟成期間を延長し、より完熟で甘いサツマイモを提供しています</p>
-      </div>
-        <img class="product-img" src="./assets/concept2.webp" alt="" id="conceptImg2">
-      </div>
-      <div class="product-container">
-        <img class="product-img" src="./assets/concept3.webp" alt="" id="conceptImg3">
-        <div class="product-item-container">
-        <h3 class="product-item"id="conceptTxt3_1">完熟芋の加工品</h3>
-        <p class="about-txt"id="conceptTxt3_1">熟成させたサツマイモは、当店でお楽しみいただける手作りスイーツに昇格させ、さらなるおいしさを発信しています</p>
-      </div>
-      </div>
-    </div>
-  </div><!-- #img -->
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
-  <script src="../src/main.js"></script>
-  <script>
-
-  </script>
-</body>
-
+    <!-- #img -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../src/main.js"></script>
+  </body>
 </html>
