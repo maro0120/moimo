@@ -1072,13 +1072,13 @@ a.shake:hover {
 }
 .product-img-left {
   width: auto;
-  height: 400px;
+  height: 40vh;
   background-image: url(../dist/assets/concept1.webp);
   background-size: cover;
 }
 .product-img-left2 {
   width: auto;
-  height: 400px;
+  height: 40vh;
   background-image: url(../dist/assets/concept3.webp);
   background-size: cover;
 }
@@ -1107,7 +1107,7 @@ a.shake:hover {
 }
 .product-img-right {
   width: auto;
-  height: 400px;
+  height: 40vh;
   background-image: url(../dist/assets/concept2.webp);
   background-size: cover;
 }
@@ -1146,9 +1146,11 @@ a.shake:hover {
   }
   .product-img-container {
     width: 100%;
+    clip-path: polygon(0 0, 100% 10vw, 100% calc(100% - 10vw), 0% 100%);
   }
   .product-img-container-right {
     width: 100%;
+    clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 calc(100% - 10vw));
   }
   .product-item-container {
     width: 80%;
