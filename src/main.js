@@ -139,8 +139,8 @@ const conceptImg1 = document.querySelector("#conceptImg1");
 const conceptTxt1_1 = document.querySelector("#conceptTxt1_1");
 const conceptTxt1_2 = document.querySelector("#conceptTxt1_2");
 gsap.set(conceptImg1, {
-  autoAlpha: 0, //ここで初期状態を設定
-  xPercent: -100,
+  autoAlpha: 1, //ここで初期状態を設定
+  xPercent: 0,
   filter: "grayscale(100%)",
 });
 gsap.set([conceptTxt1_1, conceptTxt1_2], {
@@ -157,7 +157,7 @@ const tlConcept = gsap.timeline({
 tlConcept
   .to(conceptImg1, {
     autoAlpha: 1, //ここでアニメーションさせたい内容を書く
-    xPercent: 0,
+    xPercent: 100,
     filter: "grayscale(0%)",
     duration: 1,
   })
