@@ -139,9 +139,7 @@ const conceptImg1 = document.querySelector("#conceptImg1");
 const conceptTxt1_1 = document.querySelector("#conceptTxt1_1");
 const conceptTxt1_2 = document.querySelector("#conceptTxt1_2");
 gsap.set(conceptImg1, {
-  autoAlpha: 1, //ここで初期状態を設定
-  xPercent: 0,
-  filter: "grayscale(100%)",
+  autoAlpha: 0.5, //ここで初期状態を設定
 });
 gsap.set([conceptTxt1_1, conceptTxt1_2], {
   autoAlpha: 0, //ここで初期状態を設定
@@ -150,15 +148,13 @@ gsap.set([conceptTxt1_1, conceptTxt1_2], {
 const tlConcept = gsap.timeline({
   scrollTrigger: {
     trigger: conceptImg1, //アニメーションが始まるトリガーとなる要素
-    start: "top bottom",
+    start: "top center+=20%",
     markers: true,
   },
 });
 tlConcept
   .to(conceptImg1, {
-    autoAlpha: 1, //ここでアニメーションさせたい内容を書く
-    xPercent: 100,
-    filter: "grayscale(0%)",
+    width: "0%",
     duration: 1,
   })
   .to(
@@ -173,9 +169,7 @@ const conceptImg2 = document.querySelector("#conceptImg2");
 const conceptTxt2_1 = document.querySelector("#conceptTxt2_1");
 const conceptTxt2_2 = document.querySelector("#conceptTxt2_2");
 gsap.set(conceptImg2, {
-  autoAlpha: 0, //ここで初期状態を設定
-  xPercent: 100,
-  filter: "grayscale(100%)",
+  autoAlpha: 0.5, //ここで初期状態を設定
 });
 gsap.set([conceptTxt2_1, conceptTxt2_2], {
   autoAlpha: 0, //ここで初期状態を設定
@@ -184,15 +178,13 @@ gsap.set([conceptTxt2_1, conceptTxt2_2], {
 const tlConcept2 = gsap.timeline({
   scrollTrigger: {
     trigger: conceptImg2, //アニメーションが始まるトリガーとなる要素
-    start: "top bottom",
-    markers: true,
+    start: "top center+=20%",
+    // markers: true,
   },
 });
 tlConcept2
   .to(conceptImg2, {
-    autoAlpha: 1, //ここでアニメーションさせたい内容を書く
-    xPercent: 0,
-    filter: "grayscale(0%)",
+    width: "0%",
     duration: 1,
   })
   .to(
@@ -207,9 +199,7 @@ const conceptImg3 = document.querySelector("#conceptImg3");
 const conceptTxt3_1 = document.querySelector("#conceptTxt3_1");
 const conceptTxt3_2 = document.querySelector("#conceptTxt3_2");
 gsap.set(conceptImg3, {
-  autoAlpha: 0, //ここで初期状態を設定
-  xPercent: -100,
-  filter: "grayscale(100%)",
+  autoAlpha: 0.5, //ここで初期状態を設定
 });
 gsap.set([conceptTxt3_1, conceptTxt3_2], {
   autoAlpha: 0, //ここで初期状態を設定
@@ -218,15 +208,13 @@ gsap.set([conceptTxt3_1, conceptTxt3_2], {
 const tlConcept3 = gsap.timeline({
   scrollTrigger: {
     trigger: conceptImg3, //アニメーションが始まるトリガーとなる要素
-    start: "top bottom",
-    markers: true,
+    start: "top center+=20%",
+    // markers: true,
   },
 });
 tlConcept3
   .to(conceptImg3, {
-    autoAlpha: 1, //ここでアニメーションさせたい内容を書く
-    xPercent: 0,
-    filter: "grayscale(0%)",
+    width: "0%",
     duration: 1,
   })
   .to(
