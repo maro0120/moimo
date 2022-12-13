@@ -134,12 +134,101 @@ const mySwiper = new Swiper(".swiper", {
     },
   },
 });
+//Aboutアニメーション
+    const aboutWrapper = document.querySelector('.about-wrapper');
+    const aboutContainer = document.querySelector('.about-container');
+    const aboutH1 = document.querySelectorAll('#aboutH1');
+    const aboutH2 = document.querySelectorAll('#aboutH2');
+    const aboutImg = document.querySelector('.about-img');
+    const aboutLeadTxt = document.querySelector('.about-lead-txt');
+    const aboutTxt = document.querySelector('.about-txt');
+    /* 文字列を分割しspanで囲む */
+    aboutH1.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsText = '#aboutH1 span';
+    aboutH2.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsText2 = '#aboutH2 span';
+    
+gsap.set([jsText, jsText2], {
+      autoAlpha: 0, //ここで初期状態を設定
+      y: 30,
+});
+const tlAboutTxt = gsap.timeline({
+        trigger: aboutWrapper, //アニメーションが始まるトリガーとなる要素
+        start: "top center+=20%",
+                markers: true,
+});
+tlAboutTxt
+  .to(jsText, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }})
+  .to(jsText2, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }});
+
+    const tll = gsap.timeline({
+      scrollTrigger: {
+        trigger: aboutContainer, //アニメーションが始まるトリガーとなる要素
+        start: "top center+=20%",
+
+      }
+    });
+    tll.fromTo(aboutImg, {
+      autoAlpha: 0, //ここで初期状態を設定
+      y: 100
+    }, {
+      autoAlpha: 1, //ここでアニメーションさせたい内容を書く
+      y: 0,
+      duration: 1,
+    }).fromTo(aboutLeadTxt, {
+      autoAlpha: 0, //ここで初期状態を設定
+      y: 100
+    }, {
+      autoAlpha: 1, //ここでアニメーションさせたい内容を書く
+      y: 0,
+      duration: 1,
+    }, '-=0.5')
+    .fromTo(aboutTxt, {
+      autoAlpha: 0, //ここで初期状態を設定
+      y: 100
+    }, {
+      autoAlpha: 1, //ここでアニメーションさせたい内容を書く
+      y: 0,
+      duration: 1,
+    }, '-=0.5');
 //Conceptアニメーション
 const conceptImg1 = document.querySelector("#conceptImg1");
 const conceptTxt1_1 = document.querySelector("#conceptTxt1_1");
 const conceptTxt1_2 = document.querySelector("#conceptTxt1_2");
 gsap.set(conceptImg1, {
-  autoAlpha: 0.5, //ここで初期状態を設定
+  autoAlpha: 0.8, //ここで初期状態を設定
 });
 gsap.set([conceptTxt1_1, conceptTxt1_2], {
   autoAlpha: 0, //ここで初期状態を設定
@@ -149,7 +238,7 @@ const tlConcept = gsap.timeline({
   scrollTrigger: {
     trigger: conceptImg1, //アニメーションが始まるトリガーとなる要素
     start: "top center+=20%",
-    markers: true,
+    // markers: true,
   },
 });
 tlConcept
@@ -169,7 +258,7 @@ const conceptImg2 = document.querySelector("#conceptImg2");
 const conceptTxt2_1 = document.querySelector("#conceptTxt2_1");
 const conceptTxt2_2 = document.querySelector("#conceptTxt2_2");
 gsap.set(conceptImg2, {
-  autoAlpha: 0.5, //ここで初期状態を設定
+  autoAlpha: 0.8, //ここで初期状態を設定
 });
 gsap.set([conceptTxt2_1, conceptTxt2_2], {
   autoAlpha: 0, //ここで初期状態を設定
@@ -199,7 +288,7 @@ const conceptImg3 = document.querySelector("#conceptImg3");
 const conceptTxt3_1 = document.querySelector("#conceptTxt3_1");
 const conceptTxt3_2 = document.querySelector("#conceptTxt3_2");
 gsap.set(conceptImg3, {
-  autoAlpha: 0.5, //ここで初期状態を設定
+  autoAlpha: 0.8, //ここで初期状態を設定
 });
 gsap.set([conceptTxt3_1, conceptTxt3_2], {
   autoAlpha: 0, //ここで初期状態を設定
