@@ -226,34 +226,36 @@ tlAboutTxt
       duration: 1,
     }, '-=0.5');
 //Conceptアニメーション
-const conceptImg1 = document.querySelector("#conceptImg1");
+const conceptImgCv1 = document.querySelector("#conceptImgCover1");
 const conceptImgL = document.querySelector(".concept-img-left");
 const conceptTxt1_1 = document.querySelector("#conceptTxt1_1");
 const conceptTxt1_2 = document.querySelector("#conceptTxt1_2");
-gsap.set(conceptImg1, {
+gsap.set(conceptImgCv1, {
   autoAlpha: 0.95, //ここで初期状態を設定
+  xPercent: -30,
 });
 gsap.set([conceptTxt1_1, conceptTxt1_2], {
   autoAlpha: 0,
   yPercent: 100,
 });
-// gsap.set(conceptImgL, {
-//   xPercent: -30,
-// });
+gsap.set(conceptImgL, {
+  xPercent: -30,
+});
 const tlConcept = gsap.timeline({
   scrollTrigger: {
-    trigger: conceptImg1,
-    start: "top center+=20%",
+    trigger: conceptImgCv1,
+    start: "top center+=30%",
   },
 });
 tlConcept
-  .to(conceptImg1, {
-    width: "0%",
-    duration: 1,
+  .to([conceptImgCv1,conceptImgL], {
+    xPercent:0,
+    // duration: 1,
   })
-  // .to(conceptImgL, {
-  //   xPercent:0
-  // },"<")
+  .to(conceptImgCv1, {
+    width: "0%",
+    // duration: 1,
+  },"-=0.5")
   .to(
     [conceptTxt1_1, conceptTxt1_2],
     {
@@ -262,28 +264,37 @@ tlConcept
     },
     "<"
   );
-const conceptImg2 = document.querySelector("#conceptImg2");
+const conceptImgCv2 = document.querySelector("#conceptImgCover2");
+const conceptImgR = document.querySelector(".concept-img-right");
 const conceptTxt2_1 = document.querySelector("#conceptTxt2_1");
 const conceptTxt2_2 = document.querySelector("#conceptTxt2_2");
-gsap.set(conceptImg2, {
+gsap.set(conceptImgCv2, {
   autoAlpha: 0.95, //ここで初期状態を設定
+  xPercent: 30,
 });
 gsap.set([conceptTxt2_1, conceptTxt2_2], {
   autoAlpha: 0, //ここで初期状態を設定
   yPercent: 100,
 });
+gsap.set(conceptImgR, {
+  xPercent: 30,
+});
 const tlConcept2 = gsap.timeline({
   scrollTrigger: {
-    trigger: conceptImg2, //アニメーションが始まるトリガーとなる要素
-    start: "top center+=20%",
-    // markers: true,
+    trigger: conceptImgCv2, 
+    start: "top center+=30%",
+    // markers:true
   },
 });
 tlConcept2
-  .to(conceptImg2, {
-    width: "0%",
-    duration: 1,
+  .to([conceptImgCv2,conceptImgR], {
+    xPercent:0,
+    // duration: 1,
   })
+  .to(conceptImgCv2, {
+    width: "0%",
+    // duration: 1,
+  },"-=0.5")
   .to(
     [conceptTxt2_1, conceptTxt2_2],
     {
@@ -292,28 +303,36 @@ tlConcept2
     },
     "<"
   );
-const conceptImg3 = document.querySelector("#conceptImg3");
+const conceptImgCv3 = document.querySelector("#conceptImgCover3");
+const conceptImgL2 = document.querySelector(".concept-img-left2");
 const conceptTxt3_1 = document.querySelector("#conceptTxt3_1");
 const conceptTxt3_2 = document.querySelector("#conceptTxt3_2");
-gsap.set(conceptImg3, {
-  autoAlpha: 0.8, //ここで初期状態を設定
+gsap.set(conceptImgCv3, {
+  autoAlpha: 0.95, //ここで初期状態を設定
+  xPercent: -30,
 });
 gsap.set([conceptTxt3_1, conceptTxt3_2], {
-  autoAlpha: 0, //ここで初期状態を設定
+  autoAlpha: 0,
   yPercent: 100,
+});
+gsap.set(conceptImgL2, {
+  xPercent: -30,
 });
 const tlConcept3 = gsap.timeline({
   scrollTrigger: {
-    trigger: conceptImg3, //アニメーションが始まるトリガーとなる要素
-    start: "top center+=20%",
-    // markers: true,
+    trigger: conceptImgCv3,
+    start: "top center+=30%",
   },
 });
 tlConcept3
-  .to(conceptImg3, {
-    width: "0%",
-    duration: 1,
+  .to([conceptImgCv3,conceptImgL2], {
+    xPercent:0,
+    // duration: 1,
   })
+  .to(conceptImgCv3, {
+    width: "0%",
+    // duration: 1,
+  },"-=0.5")
   .to(
     [conceptTxt3_1, conceptTxt3_2],
     {
