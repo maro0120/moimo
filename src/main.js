@@ -248,14 +248,14 @@ const conceptTxt1_1 = document.querySelector("#conceptTxt1_1");
 const conceptTxt1_2 = document.querySelector("#conceptTxt1_2");
 gsap.set(conceptImgCv1, {
   autoAlpha: 0.95, //ここで初期状態を設定
-  xPercent: -30,
+  xPercent: -100,
 });
 gsap.set([conceptTxt1_1, conceptTxt1_2], {
   autoAlpha: 0,
   yPercent: 100,
 });
 gsap.set(conceptImgL, {
-  xPercent: -30,
+  xPercent: -100,
 });
 const tlConcept = gsap.timeline({
   scrollTrigger: {
@@ -266,11 +266,13 @@ const tlConcept = gsap.timeline({
 tlConcept
   .to([conceptImgCv1,conceptImgL], {
     xPercent:0,
-    // duration: 1,
+    ease: Power2.easeInOut,
+    duration: 1,
   })
   .to(conceptImgCv1, {
     width: "0%",
-    // duration: 1,
+    ease: Power2.easeInOut,
+    duration: 1,
   },"-=0.5")
   .to(
     [conceptTxt1_1, conceptTxt1_2],
@@ -286,14 +288,14 @@ const conceptTxt2_1 = document.querySelector("#conceptTxt2_1");
 const conceptTxt2_2 = document.querySelector("#conceptTxt2_2");
 gsap.set(conceptImgCv2, {
   autoAlpha: 0.95, //ここで初期状態を設定
-  xPercent: 30,
+  xPercent: 100,
 });
 gsap.set([conceptTxt2_1, conceptTxt2_2], {
   autoAlpha: 0, //ここで初期状態を設定
   yPercent: 100,
 });
 gsap.set(conceptImgR, {
-  xPercent: 30,
+  xPercent: 100,
 });
 const tlConcept2 = gsap.timeline({
   scrollTrigger: {
@@ -325,14 +327,14 @@ const conceptTxt3_1 = document.querySelector("#conceptTxt3_1");
 const conceptTxt3_2 = document.querySelector("#conceptTxt3_2");
 gsap.set(conceptImgCv3, {
   autoAlpha: 0.95, //ここで初期状態を設定
-  xPercent: -30,
+  xPercent: -100,
 });
 gsap.set([conceptTxt3_1, conceptTxt3_2], {
   autoAlpha: 0,
   yPercent: 100,
 });
 gsap.set(conceptImgL2, {
-  xPercent: -30,
+  xPercent: -100,
 });
 const tlConcept3 = gsap.timeline({
   scrollTrigger: {

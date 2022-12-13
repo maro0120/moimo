@@ -1172,10 +1172,13 @@ a.shake:hover {
     width: 80%;
     margin-top: 10%;
   }
+.concept-img-left {
+  height: 40vh;
+}
 .concept-img-right {
   height: 40vh;
 }
-.concept-img-left {
+.concept-img-left2 {
   height: 40vh;
 }
 }
