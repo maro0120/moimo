@@ -171,7 +171,7 @@ gsap.set([jsText, jsText2], {
 const tlAboutTxt = gsap.timeline({
   scrollTrigger: {
         trigger: aboutH2,
-        start: "top bottom",
+        start: "top center",
         markers: true,
   }
 });
@@ -199,7 +199,6 @@ tlAboutTxt
       scrollTrigger: {
         trigger: aboutContainer, //アニメーションが始まるトリガーとなる要素
         start: "top center+=20%",
-
       }
     });
     tll.fromTo(aboutImg, {
@@ -225,6 +224,23 @@ tlAboutTxt
       y: 0,
       duration: 1,
     }, '-=0.5');
+//Goatアニメーション
+const imgBox= document.querySelector(".img-box");
+gsap.set(imgBox, {
+  xPercent: 100,
+});
+const tlImgBox = gsap.timeline({
+  scrollTrigger: {
+    trigger: imgBox,
+    start: "top center+=30%",
+  },
+});
+tlImgBox
+  .to(imgBox, {
+    xPercent:0,
+  ease: Power2.easeInOut,
+  duration: 1.5,
+  })
 //Conceptアニメーション
 const conceptImgCv1 = document.querySelector("#conceptImgCover1");
 const conceptImgL = document.querySelector(".concept-img-left");
