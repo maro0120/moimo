@@ -887,7 +887,7 @@ main {
   }
 }
 
-.product-container {
+.concept-container {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -980,7 +980,7 @@ a.shake:hover {
 
 .hero-wrapper {
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
   width: 100%;
   height: 100vh;
 }
@@ -1000,11 +1000,12 @@ a.shake:hover {
 }
 
 .about-container {
-  margin: 10% 0 10% 0;
+  
 }
 
 .about-img {
   width: 30%;
+  margin: 10% 0 10% 0;
 }
 
 .about-lead-txt {
@@ -1028,10 +1029,10 @@ a.shake:hover {
     object-fit: cover;
   }
   .about-lead-txt {
-    width: 80%;
+    width: 90%;
   }
   .about-txt {
-    width: 90%;
+    width: 95%;
   }
 }
 #aboutH1 span, #aboutH2 span {
@@ -1042,6 +1043,7 @@ a.shake:hover {
   clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 calc(100% - 4vw));
   height: 70vh;
   width: 100%;
+  margin: 20% 0 20% 0;
 }
 
 .img-box {
@@ -1056,17 +1058,17 @@ a.shake:hover {
     width: 100%;
   }
 }
-.product-wrapper {
+.concept-wrapper {
   background-color: var(--color-base);
   height: 100%;
   text-align: center;
   margin: 0 auto;
   padding-bottom: 10%;
 }
-.product-title {
+.concept-title {
   margin: 10% 0 10% 0;
 }
-.product-container {
+.concept-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -1075,24 +1077,24 @@ a.shake:hover {
   justify-content: center;
 }
 
-.product-img-container {
+.concept-img-container {
   width: 50%;
   clip-path: polygon(0 0, 100% 2vw, 100% calc(100% - 2vw), 0% 100%);
   position: relative;
 }
-.product-img-left {
+.concept-img-left {
   width: auto;
   height: 50vh;
   background-image: url(../dist/assets/concept1.webp);
   background-size: cover;
 }
-.product-img-left2 {
+.concept-img-left2 {
   width: auto;
   height: 50vh;
   background-image: url(../dist/assets/concept3.webp);
   background-size: cover;
 }
-.product-img-back {
+.concept-img-back {
   background-color: var(--color-theme);
   position: absolute;
   top: 0;
@@ -1101,7 +1103,7 @@ a.shake:hover {
   height: 100%;
   margin-right: 0;
 }
-.product-img-back-right {
+.concept-img-back-right {
   background-color: var(--color-theme);
   position: absolute;
   top: 0;
@@ -1110,19 +1112,19 @@ a.shake:hover {
   height: 100%;
   margin-right: 0;
 }
-.product-img-container-right {
+.concept-img-container-right {
   width: 50%;
   clip-path: polygon(0 2vw, 100% 0, 100% 100%, 0 calc(100% - 2vw));
   position: relative;
 }
-.product-img-right {
+.concept-img-right {
   width: auto;
   height: 50vh;
   background-image: url(../dist/assets/concept2.webp);
   background-size: cover;
 }
 
-.product-container-left {
+.concept-container-left {
   width: 100%;
   height: 100%;
   display: flex;
@@ -1133,43 +1135,43 @@ a.shake:hover {
   margin-bottom: -4vw;
 }
 
-.product-item-container {
+.concept-item-container {
   width: 50%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.product-item {
+.concept-item {
   width: 100%;
 }
-.product-txt {
+.concept-txt {
   width: 100%;
   text-align: center;
   margin: 0 auto;
   padding: 2% 0 2% 0;
 }
 @media (max-width: 767px) {
-  .product-container-left {
+  .concept-container-left {
     flex-direction: column-reverse;
     margin: 10% 0 10% 0;
   }
-  .product-img-container {
+  .concept-img-container {
     width: 100%;
     clip-path: polygon(0 0, 100% 10vw, 100% calc(100% - 10vw), 0% 100%);
   }
-  .product-img-container-right {
+  .concept-img-container-right {
     width: 100%;
     clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 calc(100% - 10vw));
   }
-  .product-item-container {
+  .concept-item-container {
     width: 80%;
     margin-top: 10%;
   }
-  .product-img {
+  .concept-img {
     width: 100%;
   }
-  .product-img-right {
+  .concept-img-right {
     width: 100%;
   }
 }

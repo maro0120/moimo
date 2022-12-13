@@ -15,58 +15,58 @@ jQuery(document).ready(function ($) {
     $(".global-nav").fadeToggle();
   });
 });
-const svg = document.querySelector("#svg");
-const img = document.querySelector("#img");
-const circle = document.querySelector("#circle");
-const content = document.querySelector("#content");
-const whiteLayer = document.querySelector("#whiteLayer");
-const pad = 4;
-let radius = +circle.getAttribute("r");
-let imgWidth, imgHeight;
-const tl = gsap.timeline();
-tl.to(circle, {
-  attr: {
-    r: () => radius,
-  },
-  delay: 0.5,
-  ease: "power1.in",
-})
-  .to(
-    "#whiteLayer",
-    {
-      alpha: 0,
-      ease: "power1.in",
-      duration: 1 - 0.25,
-      opacity: 0,
-    },
-    0.25
-  )
-  .to(svg, {
-    display: "none",
-  });
-init();
+// const svg = document.querySelector("#svg");
+// const img = document.querySelector("#img");
+// const circle = document.querySelector("#circle");
+// const content = document.querySelector("#content");
+// const whiteLayer = document.querySelector("#whiteLayer");
+// const pad = 4;
+// let radius = +circle.getAttribute("r");
+// let imgWidth, imgHeight;
+// const tl = gsap.timeline();
+// tl.to(circle, {
+//   attr: {
+//     r: () => radius,
+//   },
+//   delay: 0.5,
+//   ease: "power1.in",
+// })
+//   .to(
+//     "#whiteLayer",
+//     {
+//       alpha: 0,
+//       ease: "power1.in",
+//       duration: 1 - 0.25,
+//       opacity: 0,
+//     },
+//     0.25
+//   )
+//   .to(svg, {
+//     display: "none",
+//   });
+// init();
 
-function init() {
-  imgWidth = img.naturalWidth;
-  imgHeight = img.naturalHeight;
-  resize();
-}
+// function init() {
+//   imgWidth = img.naturalWidth;
+//   imgHeight = img.naturalHeight;
+//   resize();
+// }
 
-function resize() {
-  tl.progress(0);
-  const r = svg.getBoundingClientRect();
-  const rectWidth = r.width + pad;
-  const rectHeight = r.height + pad;
-  const rx = rectWidth / imgWidth;
-  const ry = rectHeight / imgHeight;
-  const ratio = Math.max(rx, ry);
-  const width = imgWidth * ratio;
-  const height = imgHeight * ratio;
-  const dx = rectWidth / 2;
-  const dy = rectHeight / 2;
-  radius = Math.sqrt(dx * dx + dy * dy);
-  gsap.set(img, { width, height });
-}
+// function resize() {
+//   tl.progress(0);
+//   const r = svg.getBoundingClientRect();
+//   const rectWidth = r.width + pad;
+//   const rectHeight = r.height + pad;
+//   const rx = rectWidth / imgWidth;
+//   const ry = rectHeight / imgHeight;
+//   const ratio = Math.max(rx, ry);
+//   const width = imgWidth * ratio;
+//   const height = imgHeight * ratio;
+//   const dx = rectWidth / 2;
+//   const dy = rectHeight / 2;
+//   radius = Math.sqrt(dx * dx + dy * dy);
+//   gsap.set(img, { width, height });
+// }
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("li.l-gnav__item").forEach((element) => {
     // 親要素に data-overwrite 属性が適用されているかで判断
@@ -169,9 +169,11 @@ gsap.set([jsText, jsText2], {
       y: 30,
 });
 const tlAboutTxt = gsap.timeline({
-        trigger: aboutWrapper, //アニメーションが始まるトリガーとなる要素
-        start: "top center+=20%",
-                markers: true,
+  scrollTrigger: {
+        trigger: aboutH2,
+        start: "top bottom",
+        markers: true,
+  }
 });
 tlAboutTxt
   .to(jsText, {
@@ -225,20 +227,23 @@ tlAboutTxt
     }, '-=0.5');
 //Conceptアニメーション
 const conceptImg1 = document.querySelector("#conceptImg1");
+const conceptImgL = document.querySelector(".concept-img-left");
 const conceptTxt1_1 = document.querySelector("#conceptTxt1_1");
 const conceptTxt1_2 = document.querySelector("#conceptTxt1_2");
 gsap.set(conceptImg1, {
-  autoAlpha: 0.8, //ここで初期状態を設定
+  autoAlpha: 0.95, //ここで初期状態を設定
 });
 gsap.set([conceptTxt1_1, conceptTxt1_2], {
-  autoAlpha: 0, //ここで初期状態を設定
+  autoAlpha: 0,
   yPercent: 100,
 });
+// gsap.set(conceptImgL, {
+//   xPercent: -30,
+// });
 const tlConcept = gsap.timeline({
   scrollTrigger: {
-    trigger: conceptImg1, //アニメーションが始まるトリガーとなる要素
+    trigger: conceptImg1,
     start: "top center+=20%",
-    // markers: true,
   },
 });
 tlConcept
@@ -246,10 +251,13 @@ tlConcept
     width: "0%",
     duration: 1,
   })
+  // .to(conceptImgL, {
+  //   xPercent:0
+  // },"<")
   .to(
     [conceptTxt1_1, conceptTxt1_2],
     {
-      autoAlpha: 1, //ここでアニメーションさせたい内容を書く
+      autoAlpha: 1,
       yPercent: 0,
     },
     "<"
@@ -258,7 +266,7 @@ const conceptImg2 = document.querySelector("#conceptImg2");
 const conceptTxt2_1 = document.querySelector("#conceptTxt2_1");
 const conceptTxt2_2 = document.querySelector("#conceptTxt2_2");
 gsap.set(conceptImg2, {
-  autoAlpha: 0.8, //ここで初期状態を設定
+  autoAlpha: 0.95, //ここで初期状態を設定
 });
 gsap.set([conceptTxt2_1, conceptTxt2_2], {
   autoAlpha: 0, //ここで初期状態を設定
