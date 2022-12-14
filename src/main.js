@@ -178,7 +178,7 @@ const tlAboutTxt = gsap.timeline({
   scrollTrigger: {
         trigger: aboutH2,
         start: "top center",
-        markers: true,
+        // markers: true,
   }
 });
 tlAboutTxt
@@ -286,7 +286,6 @@ const tlConcetTxt = gsap.timeline({
   scrollTrigger: {
         trigger: conceptH1,
         start: "top center",
-        markers: true,
   }
 });
 tlConcetTxt
@@ -364,7 +363,6 @@ const tlConcept2 = gsap.timeline({
   scrollTrigger: {
     trigger: conceptImgCv2, 
     start: "top center+=30%",
-    // markers:true
   },
 });
 tlConcept2
@@ -457,6 +455,25 @@ const productLnk = document.querySelector(".product-lnk");
       duration:0,
     })
   });
+  
+
+// shopアニメーション
+const shopImgCv1 = document.querySelector("#shopImgCover");
+gsap.set(shopImgCv1, {
+  xPercent: 0,
+});
+const tlShop = gsap.timeline({
+  scrollTrigger: {
+    trigger: shopImgCv1,
+    start: "top center+=30%",
+  },
+});
+tlShop
+  .to(shopImgCv1, {
+    xPercent:-100,
+    ease: Power2.easeInOut,
+    duration: 1,
+  });
   // shopマウスホバー
 const shopImg = document.querySelector(".shop-img");
 const shopLnk = document.querySelector(".shop-lnk");
@@ -468,6 +485,39 @@ const shopLnk = document.querySelector(".shop-lnk");
   });
   shopLnk.addEventListener("mouseout", () => {
     gsap.to(shopImg,{
+      filter: "grayscale(80%)",
+      duration:0,
+    })
+  });
+  
+// noufukuアニメーション
+const noufukuImgCv1 = document.querySelector("#noufukuImgCover");
+gsap.set(noufukuImgCv1, {
+  xPercent: 0,
+});
+const tlNoufuku = gsap.timeline({
+  scrollTrigger: {
+    trigger: noufukuImgCv1,
+    start: "top center+=30%",
+  },
+});
+tlNoufuku
+  .to(noufukuImgCv1, {
+    xPercent:100,
+    ease: Power2.easeInOut,
+    duration: 1,
+  });
+  // noufukuマウスホバー
+const noufukuImg = document.querySelector("noufuku-img");
+const noufukuLnk = document.querySelector(".noufuku-lnk");
+  noufukuLnk.addEventListener("mouseover", () => {
+    gsap.to(noufukuImg,{
+      filter: "grayscale(0%)",
+      duration:0,
+    });
+  });
+  noufukuLnk.addEventListener("mouseout", () => {
+    gsap.to(noufukuImg,{
       filter: "grayscale(80%)",
       duration:0,
     })
