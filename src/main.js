@@ -158,7 +158,7 @@ const mySwiper = new Swiper(".swiper", {
       }
       target.innerHTML = newText;
     });
-    const jsText = '#aboutH1 span';
+    const jsText = '#about-h1 span';
     aboutH2.forEach(target => {
       let newText = '';
       const text = target.textContent;
@@ -168,7 +168,7 @@ const mySwiper = new Swiper(".swiper", {
       }
       target.innerHTML = newText;
     });
-    const jsText2 = '#aboutH2 span';
+    const jsText2 = '#about-h2 span';
     
 gsap.set([jsText, jsText2], {
       autoAlpha: 0, //ここで初期状態を設定
@@ -266,7 +266,7 @@ const conceptTxt1_2 = document.querySelector("#conceptTxt1_2");
       }
       target.innerHTML = newText;
     });
-    const jsConceText = '#conceptH1 span';
+    const jsConceText = '#concept-h1 span';
     conceptH2.forEach(target => {
       let newText = '';
       const text = target.textContent;
@@ -276,7 +276,7 @@ const conceptTxt1_2 = document.querySelector("#conceptTxt1_2");
       }
       target.innerHTML = newText;
     });
-    const jsConceText2 = '#conceptH2 span';
+    const jsConceText2 = '#concept-h2 span';
     
 gsap.set([jsConceText, jsConceText2], {
       autoAlpha: 0, //ここで初期状態を設定
@@ -370,11 +370,13 @@ const tlConcept2 = gsap.timeline({
 tlConcept2
   .to([conceptImgCv2,conceptImgR], {
     xPercent:0,
-    // duration: 1,
+    ease: Power2.easeInOut,
+    duration: 1,
   })
   .to(conceptImgCv2, {
     width: "0%",
-    // duration: 1,
+    ease: Power2.easeInOut,
+    duration: 1,
   },"-=0.5")
   .to(
     [conceptTxt2_1, conceptTxt2_2],
@@ -408,11 +410,12 @@ const tlConcept3 = gsap.timeline({
 tlConcept3
   .to([conceptImgCv3,conceptImgL2], {
     xPercent:0,
-    // duration: 1,
+    ease: Power2.easeInOut,
+    duration: 1,
   })
   .to(conceptImgCv3, {
     width: "0%",
-    // duration: 1,
+
   },"-=0.5")
   .to(
     [conceptTxt3_1, conceptTxt3_2],
@@ -422,22 +425,50 @@ tlConcept3
     },
     "<"
   );
+// productアニメーション
+const productImgCv1 = document.querySelector("#productImgCover");
+gsap.set(productImgCv1, {
+  xPercent: 0,
+});
+const tlProduct = gsap.timeline({
+  scrollTrigger: {
+    trigger: productImgCv1,
+    start: "top center+=30%",
+  },
+});
+tlProduct
+  .to(productImgCv1, {
+    xPercent:100,
+    ease: Power2.easeInOut,
+    duration: 1,
+  });
 // productマウスホバー
 const productImg = document.querySelector(".product-img");
 const productLnk = document.querySelector(".product-lnk");
-// document.querySelectorAll(".product-lnk").forEach((box) => {
   productLnk.addEventListener("mouseover", () => {
-    // gsap.effects.zoomIn(box, { duration: 0.2, scale: 1.5 });
     gsap.to(productImg,{
       filter: "grayscale(0%)",
       duration:0,
     });
   });
   productLnk.addEventListener("mouseout", () => {
-    // gsap.effects.zoomIn(box, { duration: 0.2, scale: 1.5 });
     gsap.to(productImg,{
       filter: "grayscale(80%)",
       duration:0,
     })
   });
-// });
+  // shopマウスホバー
+const shopImg = document.querySelector(".shop-img");
+const shopLnk = document.querySelector(".shop-lnk");
+  shopLnk.addEventListener("mouseover", () => {
+    gsap.to(shopImg,{
+      filter: "grayscale(0%)",
+      duration:0,
+    });
+  });
+  shopLnk.addEventListener("mouseout", () => {
+    gsap.to(shopImg,{
+      filter: "grayscale(80%)",
+      duration:0,
+    })
+  });
