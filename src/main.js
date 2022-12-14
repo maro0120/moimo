@@ -137,8 +137,8 @@ const mySwiper = new Swiper(".swiper", {
 //Aboutアニメーション
     const aboutWrapper = document.querySelector('.about-wrapper');
     const aboutContainer = document.querySelector('.about-container');
-    const aboutH1 = document.querySelectorAll('#aboutH1');
-    const aboutH2 = document.querySelectorAll('#aboutH2');
+    const aboutH1 = document.querySelectorAll('#about-h1');
+    const aboutH2 = document.querySelectorAll('#about-h2');
     const aboutImg = document.querySelector('.about-img');
     const aboutLeadTxt = document.querySelector('.about-lead-txt');
     const aboutTxt = document.querySelector('.about-txt');
@@ -246,6 +246,63 @@ const conceptImgCv1 = document.querySelector("#conceptImgCover1");
 const conceptImgL = document.querySelector(".concept-img-left");
 const conceptTxt1_1 = document.querySelector("#conceptTxt1_1");
 const conceptTxt1_2 = document.querySelector("#conceptTxt1_2");
+
+    const conceptH1 = document.querySelectorAll('#concept-h1');
+    const conceptH2 = document.querySelectorAll('#concept-h2');
+
+    /* 文字列を分割しspanで囲む */
+    conceptH1.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsConceText = '#conceptH1 span';
+    conceptH2.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsConceText2 = '#conceptH2 span';
+    
+gsap.set([jsConceText, jsConceText2], {
+      autoAlpha: 0, //ここで初期状態を設定
+      y: 30,
+});
+const tlConcetTxt = gsap.timeline({
+  scrollTrigger: {
+        trigger: conceptH1,
+        start: "top center",
+        markers: true,
+  }
+});
+tlConcetTxt
+  .to(jsConceText, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }})
+  .to(jsConceText2, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }});
+      
 gsap.set(conceptImgCv1, {
   autoAlpha: 0.95, //ここで初期状態を設定
   xPercent: -100,
@@ -359,3 +416,22 @@ tlConcept3
     },
     "<"
   );
+// productマウスホバー
+const productImg = document.querySelector(".product-img");
+const productLnk = document.querySelector(".product-lnk");
+// document.querySelectorAll(".product-lnk").forEach((box) => {
+  productLnk.addEventListener("mouseover", () => {
+    // gsap.effects.zoomIn(box, { duration: 0.2, scale: 1.5 });
+    gsap.to(productImg,{
+      filter: "grayscale(0%)",
+      duration:0,
+    });
+  });
+  productLnk.addEventListener("mouseout", () => {
+    // gsap.effects.zoomIn(box, { duration: 0.2, scale: 1.5 });
+    gsap.to(productImg,{
+      filter: "grayscale(80%)",
+      duration:0,
+    })
+  });
+// });
