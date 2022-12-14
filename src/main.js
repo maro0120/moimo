@@ -1,8 +1,12 @@
+// SmoothScroll
 var scroll = new SmoothScroll('a[href*="#"]', {
   easing: "easeOutQuint",
   speed: 1000,
   header: "[data-scroll-header]",
 });
+document.addEventListener('scrollCancel', scroll.cancelScroll(), false);
+
+//ヘッダーナビ
 jQuery(document).ready(function ($) {
   $(".toggle-btn").on("click", function () {
     $(".toggle-btn__line").toggleClass("active");
