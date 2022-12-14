@@ -4,7 +4,9 @@ var scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
   header: "[data-scroll-header]",
 });
-document.addEventListener('touchstart', scroll.cancelScroll(), false);
+document.addEventListener('touchstart',  () => {
+        scroll.cancelScroll();
+    })
 
 //ヘッダーナビ
 jQuery(document).ready(function ($) {
