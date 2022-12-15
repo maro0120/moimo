@@ -542,10 +542,11 @@ ol {
 }
 
 .about-txt {
-  width: 60%;
-  text-align: center;
+  text-align: left;
+  max-width: 70%;
   margin: 0 auto;
-  padding: 2% 0 2% 0;
+  display: inline-block;
+  padding: 2%;
 }
 
 @media (max-width: 767px) {
@@ -556,9 +557,9 @@ ol {
   .about-lead-txt {
     width: 90%;
   }
-  .about-txt {
-    width: 95%;
-  }
+.about-txt {
+  max-width: 90%;
+}
 }
 #about-h1 span, #about-h2 span {
   display: inline-block;
@@ -749,6 +750,7 @@ ol {
 }
 .lnk-title{
   font-size: 1.5rem;
+  font-weight: bold;
   color: var(--color-base)
 }
 .product-img {
@@ -833,7 +835,7 @@ top: 48px;
   clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 calc(100% - 4vw));
   height: 70vh;
   width: 100%;
-  margin: 20% 0 20% 0;
+  margin: 5% 0 20% 0;
   overflow: hidden;
 }
 
@@ -919,7 +921,7 @@ top: 48px;
   clip-path: polygon(0 0, 100% 4vw, 100% calc(100% - 4vw), 0% 100%);
   height: 70vh;
   width: 100%;
-  margin: 20% 0 20% 0;
+  margin: 5% 0 20% 0;
   overflow: hidden;
 }
 
@@ -1011,6 +1013,7 @@ top: 48px;
 .access-item-txt {
   text-align: left;
   padding: 5%;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -1020,6 +1023,7 @@ top: 48px;
 
   .access-item-txt {
     padding: 0 10vw 0 0;
+    font-size: 1rem;
   }
 }
 
