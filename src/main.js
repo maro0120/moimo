@@ -199,7 +199,7 @@ tlAboutTxt
         amount: 0.5,
         from: "start",
         ease: "sine.in"
-      }});
+      }},"<");
 
     const tll = gsap.timeline({
       scrollTrigger: {
@@ -306,7 +306,7 @@ tlConcetTxt
         amount: 0.5,
         from: "start",
         ease: "sine.in"
-      }});
+      }},"<");
       
 gsap.set(conceptImgCv1, {
   autoAlpha: 0.95, //ここで初期状態を設定
@@ -425,6 +425,61 @@ tlConcept3
   );
 // productアニメーション
 const productImgCv1 = document.querySelector("#productImgCover");
+    const productH1 = document.querySelectorAll('#product-h1');
+    const productH2 = document.querySelectorAll('#product-h2');
+
+    /* 文字列を分割しspanで囲む */
+    productH1.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsProdText = '#product-h1 span';
+    productH2.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsProdText2 = '#product-h2 span';
+    
+gsap.set([jsProdText, jsProdText2], {
+      autoAlpha: 0, //ここで初期状態を設定
+      y: 30,
+});
+const tlProdTxt = gsap.timeline({
+  scrollTrigger: {
+        trigger: productH1,
+        start: "top center",
+  }
+});
+tlProdTxt
+  .to(jsProdText, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }})
+  .to(jsProdText2, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }},"<");
+      
 gsap.set(productImgCv1, {
   xPercent: 0,
 });
@@ -459,6 +514,60 @@ const productLnk = document.querySelector(".product-lnk");
 
 // shopアニメーション
 const shopImgCv1 = document.querySelector("#shopImgCover");
+    const shopH1 = document.querySelectorAll('#shop-h1');
+    const shopH2 = document.querySelectorAll('#shop-h2');
+
+    /* 文字列を分割しspanで囲む */
+    shopH1.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsShopText = '#shop-h1 span';
+    shopH2.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsShopText2 = '#shop-h2 span';
+    
+gsap.set([jsShopText, jsShopText2], {
+      autoAlpha: 0, //ここで初期状態を設定
+      y: 30,
+});
+const tlShopTxt = gsap.timeline({
+  scrollTrigger: {
+        trigger: shopH1,
+        start: "top center",
+  }
+});
+tlShopTxt
+  .to(jsShopText, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }})
+  .to(jsShopText2, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }},"<");
 gsap.set(shopImgCv1, {
   xPercent: 0,
 });
@@ -492,6 +601,43 @@ const shopLnk = document.querySelector(".shop-lnk");
   
 // noufukuアニメーション
 const noufukuImgCv1 = document.querySelector("#noufukuImgCover");
+    const noufukuH1 = document.querySelectorAll('#noufuku-h1');
+
+
+    /* 文字列を分割しspanで囲む */
+    noufukuH1.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsNoufukuText = '#noufuku-h1 span';
+
+    
+gsap.set([jsNoufukuText, ], {
+      autoAlpha: 0, //ここで初期状態を設定
+      y: 30,
+});
+const tlNfkTxt = gsap.timeline({
+  scrollTrigger: {
+        trigger: noufukuH1,
+        start: "top center",
+  }
+});
+tlNfkTxt
+  .to(jsNoufukuText, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }});
+
 gsap.set(noufukuImgCv1, {
   xPercent: 0,
 });
@@ -522,3 +668,99 @@ const noufukuLnk = document.querySelector(".noufuku-lnk");
       duration:0,
     })
   });
+  
+  
+  // Accessアニメーション
+      const accessH1 = document.querySelectorAll('#access-h1');
+    const accessH2 = document.querySelectorAll('#access-h2');
+
+    /* 文字列を分割しspanで囲む */
+    accessH1.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsAccessText = '#access-h1 span';
+    accessH2.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsAccessText2 = '#access-h2 span';
+    
+gsap.set([jsAccessText, jsAccessText2], {
+      autoAlpha: 0, //ここで初期状態を設定
+      y: 30,
+});
+const tlAccessTxt = gsap.timeline({
+  scrollTrigger: {
+        trigger: accessH1,
+        start: "top center",
+  }
+});
+tlAccessTxt
+  .to(jsAccessText, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }})
+  .to(jsAccessText2, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }},"<");
+
+// Instagramアニメーション
+
+    const instaH1 = document.querySelectorAll('#instagram-h1');
+
+
+    /* 文字列を分割しspanで囲む */
+    instaH1.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsInstaText = '#instagram-h1 span';
+
+    
+gsap.set([jsInstaText, ], {
+      autoAlpha: 0, //ここで初期状態を設定
+      y: 30,
+});
+const tlInstaTxt = gsap.timeline({
+  scrollTrigger: {
+        trigger: instaH1,
+        start: "top center",
+  }
+});
+tlInstaTxt
+  .to(jsInstaText, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }});

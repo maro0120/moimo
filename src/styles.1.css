@@ -989,7 +989,9 @@ top: 46px;
   padding: 3%;
   gap: 5vh 5vw;
 }
-
+#access-h1 span, #access-h2 span {
+  display: inline-block;
+}
 .access-item {
   flex: 1;
   display: flex;
@@ -1017,6 +1019,12 @@ top: 46px;
     padding: 0 10vw 0 0;
   }
 }
+
+
+#instagram-h1 span, #instagram-h2 span {
+  display: inline-block;
+}
+
 .footer{
   position: relative;
   width: 100%;
