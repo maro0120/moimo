@@ -1068,7 +1068,8 @@ top: 48px;
 .menu-title {
   margin: 10% 0 20% 0;
 }
-#menu-more-h1 span {
+
+#menu-h1 span, #menu-h2 span {
   display: inline-block;
 }
 .menu-container {
@@ -1244,7 +1245,9 @@ dl.menu dd{
   display: flex;
   flex-wrap: wrap;
 }
-
+#menu-more-h1 span {
+  display: inline-block;
+}
 
 section.menu_area{
   width: 45%;
