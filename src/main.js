@@ -1,7 +1,7 @@
 // SmoothScroll
 var scroll = new SmoothScroll('a[href*="#"]', {
   easing: "easeOutQuint",
-  speed: 500,
+  speed: 2000,
   header: "[data-scroll-header]",
 });
 document.addEventListener('touchstart',  () => {
