@@ -1,7 +1,7 @@
 // SmoothScroll
 var scroll = new SmoothScroll('a[href*="#"]', {
   easing: "easeOutQuint",
-  speed: 300,
+  speed: 700,
   header: "[data-scroll-header]",
 });
 document.addEventListener('touchstart',  () => {
@@ -654,7 +654,7 @@ tlNoufuku
     duration: 1,
   });
   // noufukuマウスホバー
-const noufukuImg = document.querySelector("noufuku-img");
+const noufukuImg = document.querySelector(".noufuku-img");
 const noufukuLnk = document.querySelector(".noufuku-lnk");
   noufukuLnk.addEventListener("mouseover", () => {
     gsap.to(noufukuImg,{
