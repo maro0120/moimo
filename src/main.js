@@ -177,7 +177,7 @@ gsap.set([jsText, jsText2], {
 const tlAboutTxt = gsap.timeline({
   scrollTrigger: {
         trigger: aboutH2,
-        start: "top center",
+        start: "top bottom",
         // markers: true,
   }
 });
@@ -285,7 +285,7 @@ gsap.set([jsConceText, jsConceText2], {
 const tlConcetTxt = gsap.timeline({
   scrollTrigger: {
         trigger: conceptH1,
-        start: "top center",
+        start: "top bottom",
   }
 });
 tlConcetTxt
@@ -457,7 +457,7 @@ gsap.set([jsProdText, jsProdText2], {
 const tlProdTxt = gsap.timeline({
   scrollTrigger: {
         trigger: productH1,
-        start: "top center",
+        start: "top bottom",
   }
 });
 tlProdTxt
@@ -546,7 +546,7 @@ gsap.set([jsShopText, jsShopText2], {
 const tlShopTxt = gsap.timeline({
   scrollTrigger: {
         trigger: shopH1,
-        start: "top center",
+        start: "top bottom",
   }
 });
 tlShopTxt
@@ -624,7 +624,7 @@ gsap.set([jsNoufukuText, ], {
 const tlNfkTxt = gsap.timeline({
   scrollTrigger: {
         trigger: noufukuH1,
-        start: "top center",
+        start: "top bottom",
   }
 });
 tlNfkTxt
@@ -703,7 +703,7 @@ gsap.set([jsAccessText, jsAccessText2], {
 const tlAccessTxt = gsap.timeline({
   scrollTrigger: {
         trigger: accessH1,
-        start: "top center",
+        start: "top bottom",
   }
 });
 tlAccessTxt
@@ -751,7 +751,7 @@ gsap.set([jsInstaText, ], {
 const tlInstaTxt = gsap.timeline({
   scrollTrigger: {
         trigger: instaH1,
-        start: "top center",
+        start: "top bottom",
   }
 });
 tlInstaTxt
