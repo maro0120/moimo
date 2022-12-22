@@ -38,7 +38,8 @@ gsap.set([jsMenuText, jsMenuText2], {
 const tlMenutTxt = gsap.timeline({
   scrollTrigger: {
         trigger: menuH1,
-        start: "top center",
+        start: "top bottom",
+        // markers:true,
   }
 });
 tlMenutTxt
@@ -84,12 +85,12 @@ tlMenu
     duration: 1,
   })
   .to(menuImgTitle1, {
-    width: "250px",
+    width: "180px",
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
     .to(menuImgPrice1, {
-    width: "200px",
+    width: "120px",
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
@@ -130,12 +131,12 @@ tlMenu2
     duration: 1,
   })
   .to(menuImgTitle2, {
-    width: "250px",
+    width: "180px",
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
     .to(menuImgPrice2, {
-    width: "200px",
+    width: "120px",
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
@@ -177,12 +178,12 @@ tlMenu3
     duration: 1,
   })
   .to(menuImgTitle3, {
-    width: "250px",
+    width: "180px",
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
     .to(menuImgPrice3, {
-    width: "200px",
+    width: "120px",
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
@@ -194,3 +195,41 @@ tlMenu3
     },
     "<"
   );
+  
+
+
+    const menuMoreH1 = document.querySelectorAll('#menu-more-h1');
+
+    /* 文字列を分割しspanで囲む */
+    menuMoreH1.forEach(target => {
+      let newText = '';
+      const text = target.textContent;
+      const result = text.split('');
+      for (let i = 0; i < result.length; i++) {
+        newText += '<span>' + result[i] + '</span>';
+      }
+      target.innerHTML = newText;
+    });
+    const jsMenuMoreText = '#menu-more-h1 span';
+
+    
+gsap.set([jsMenuMoreText], {
+      autoAlpha: 0, //ここで初期状態を設定
+      y: 30,
+});
+const tlMenutMoreTxt = gsap.timeline({
+  scrollTrigger: {
+        trigger: menuMoreH1,
+        start: "top bottom",
+  }
+});
+tlMenutMoreTxt
+  .to(jsMenuMoreText, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+        ease: "sine.in"
+      }});
