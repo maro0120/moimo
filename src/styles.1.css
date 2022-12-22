@@ -1139,6 +1139,7 @@ top: 48px;
   width: 120px;
   height: 60px;
   opacity: 0.95;
+  overflow: hidden;
 }
 .menu-img-cover-right {
   background-color: var(--color-theme);
