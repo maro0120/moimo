@@ -243,8 +243,8 @@ const tlImgBox = gsap.timeline({
 });
 tlImgBox
   .to(imgBox, {
-    backgroundPositionX: "-100px",
-    backgroundPositionY: "60%",
+    backgroundPositionX: "50%",
+    backgroundPositionY: "50%",
   ease: Power2.easeInOut,
   duration: 1.0,
   })
