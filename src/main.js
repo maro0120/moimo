@@ -317,7 +317,7 @@ gsap.set([conceptTxt1_1, conceptTxt1_2], {
   yPercent: 100,
 });
 gsap.set(conceptImgL, {
-  xPercent: -15,
+  // backgroundPositionX: "-50px",
 });
 const tlConcept = gsap.timeline({
   scrollTrigger: {
@@ -326,11 +326,16 @@ const tlConcept = gsap.timeline({
   },
 });
 tlConcept
-  .to([conceptImgCv1,conceptImgL], {
+  .to([conceptImgCv1], {
     xPercent:0,
     ease: Power2.easeInOut,
     duration: 1,
   })
+  .to([conceptImgL], {
+    backgroundPositionX: "0",
+    ease: Power2.easeInOut,
+    duration: 1,
+  },"<")
   .to(conceptImgCv1, {
     width: "0%",
     ease: Power2.easeInOut,
@@ -357,7 +362,7 @@ gsap.set([conceptTxt2_1, conceptTxt2_2], {
   yPercent: 100,
 });
 gsap.set(conceptImgR, {
-  xPercent: 100,
+  // xPercent: 100,
 });
 const tlConcept2 = gsap.timeline({
   scrollTrigger: {
@@ -371,6 +376,11 @@ tlConcept2
     ease: Power2.easeInOut,
     duration: 1,
   })
+  .to([conceptImgR], {
+    backgroundPositionX: "0",
+    ease: Power2.easeInOut,
+    duration: 1,
+  },"<")
   .to(conceptImgCv2, {
     width: "0%",
     ease: Power2.easeInOut,
@@ -397,7 +407,7 @@ gsap.set([conceptTxt3_1, conceptTxt3_2], {
   yPercent: 100,
 });
 gsap.set(conceptImgL2, {
-  xPercent: -100,
+  // xPercent: -100,
 });
 const tlConcept3 = gsap.timeline({
   scrollTrigger: {
@@ -411,9 +421,13 @@ tlConcept3
     ease: Power2.easeInOut,
     duration: 1,
   })
+  .to([conceptImgL2], {
+    backgroundPositionX: "0",
+    ease: Power2.easeInOut,
+    duration: 1,
+  },"<")
   .to(conceptImgCv3, {
     width: "0%",
-
   },"-=0.5")
   .to(
     [conceptTxt3_1, conceptTxt3_2],
