@@ -317,7 +317,7 @@ gsap.set([conceptTxt1_1, conceptTxt1_2], {
   yPercent: 100,
 });
 gsap.set(conceptImgL, {
-  xPercent: -100,
+  xPercent: -15,
 });
 const tlConcept = gsap.timeline({
   scrollTrigger: {
