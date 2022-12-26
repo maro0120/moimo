@@ -244,6 +244,7 @@ const tlImgBox = gsap.timeline({
 tlImgBox
   .to(imgBox, {
     backgroundPositionX: "-100px",
+    backgroundPositionY: "60%",
   ease: Power2.easeInOut,
   duration: 1.0,
   })
