@@ -567,7 +567,7 @@ ol {
 
 .img-box-container {
   clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 calc(100% - 4vw));
-  height: 70vh;
+  height: 85vh;
   width: 100%;
   margin: 20% 0 20% 0;
   overflow: hidden;
@@ -577,6 +577,15 @@ ol {
   object-fit: cover;
     width: 100%;
     height: 100%;
+}
+.img-box-goat {
+    width: 100%;
+    height: 100%;
+  background-image: url(../dist/assets/goat.webp);
+  background-size: cover;
+  transform: scale(1.4);
+  background-position-x:50px;
+  background-position-y:60%;
 }
 @media (max-width: 767px) {
   .img-box-container {
@@ -627,7 +636,7 @@ ol {
 }
 .concept-img-left {
   width: auto;
-  height: 50vh;
+  height: 70vh;
   background-image: url(../dist/assets/concept1.webp);
   background-size: cover;
   transform: scale(1.4);
@@ -635,7 +644,7 @@ ol {
 }
 .concept-img-right {
   width: auto;
-  height: 50vh;
+  height: 70vh;
   background-image: url(../dist/assets/concept2.webp);
   background-size: cover;
   transform: scale(1.4);
@@ -643,7 +652,7 @@ ol {
 }
 .concept-img-left2 {
   width: auto;
-  height: 50vh;
+  height: 70vh;
   background-image: url(../dist/assets/concept3.webp);
   background-size: cover;
   transform: scale(1.4);
@@ -689,7 +698,7 @@ ol {
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  padding: 2% 0 2% 0;
+  padding: 2%;
 }
 @media (max-width: 767px) {
   .concept-container-left {
@@ -705,7 +714,7 @@ ol {
     clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 calc(100% - 10vw));
   }
   .concept-item-container {
-    width: 80%;
+    width: 90%;
     margin-top: 10%;
   }
 .concept-img-left {

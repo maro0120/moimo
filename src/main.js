@@ -231,9 +231,9 @@ tlAboutTxt
       duration: 1,
     }, '-=0.5');
 //Goatアニメーション
-const imgBox= document.querySelector(".img-box");
+const imgBox= document.querySelector(".img-box-goat");
 gsap.set(imgBox, {
-  xPercent: 100,
+  // xPercent: 100,
 });
 const tlImgBox = gsap.timeline({
   scrollTrigger: {
@@ -243,9 +243,9 @@ const tlImgBox = gsap.timeline({
 });
 tlImgBox
   .to(imgBox, {
-    xPercent:0,
+    backgroundPositionX: "-100px",
   ease: Power2.easeInOut,
-  duration: 1.5,
+  duration: 1.0,
   })
 //Conceptアニメーション
 const conceptImgCv1 = document.querySelector("#conceptImgCover1");
