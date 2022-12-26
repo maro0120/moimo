@@ -1,6 +1,8 @@
 //Menuアニメーション
 const menuImgTitle1 = document.querySelector("#menuImgTitle1");
+const menuImgText1 = document.querySelector("#menuImgText1");
 const menuImgPrice1 = document.querySelector("#menuImgPrice1");
+const menuImgPriceText1 = document.querySelector("#menuImgPriceText1");
 
 const menuImgL = document.querySelector(".menu-img-left");
 const menuTxt1_1 = document.querySelector("#menuTxt1_1");
@@ -65,6 +67,14 @@ tlMenutTxt
 gsap.set([menuImgTitle1,menuImgPrice1], {
   width:"0%",
 });
+gsap.set(menuImgText1, {
+  xPercent: -100,
+  autoAlpha: 0,
+});
+gsap.set(menuImgPriceText1, {
+  xPercent: 100,
+  autoAlpha: 0,
+});
 gsap.set([menuTxt1_2], {
   autoAlpha: 0,
   yPercent: 100,
@@ -89,11 +99,23 @@ tlMenu
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
+  .to(menuImgText1, {
+    xPercent: 0,
+    autoAlpha: 1,
+    ease: Power2.easeInOut,
+    duration: 1,
+  },"-=0.8")
     .to(menuImgPrice1, {
     width: "120px",
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
+  .to(menuImgPriceText1, {
+    xPercent: 0,
+    autoAlpha: 1,
+    ease: Power2.easeInOut,
+    duration: 1,
+  },"-=0.8")
   .to(
     [ menuTxt1_2],
     {
