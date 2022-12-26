@@ -438,6 +438,25 @@ tlConcept3
     },
     "<"
   );
+
+//中間アニメーション
+const imgImoBox= document.querySelector(".img-box-imo");
+gsap.set(imgImoBox, {
+  // xPercent: 100,
+});
+const tlImgImoBox = gsap.timeline({
+  scrollTrigger: {
+    trigger: imgImoBox,
+    start: "top center+=30%",
+  },
+});
+tlImgImoBox
+  .to(imgImoBox, {
+    backgroundPositionX: "50%",
+    backgroundPositionY: "50%",
+  ease: Power2.easeInOut,
+  duration: 1.0,
+  })
 // productアニメーション
 const productImgCv1 = document.querySelector("#productImgCover");
     const productH1 = document.querySelectorAll('#product-h1');
