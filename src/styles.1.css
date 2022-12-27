@@ -543,10 +543,11 @@ ol {
 
 .about-txt {
   text-align: left;
-  max-width: 70%;
+  width: 70%;
+  max-width: 700px;
   margin: 0 auto;
   display: inline-block;
-  padding: 2% 0 2% 0;
+  padding: 10% 0 2% 0;
 }
 
 @media (max-width: 767px) {
@@ -558,11 +559,11 @@ ol {
     object-fit: cover;
   }
   .about-lead-txt {
-    width: 90%;
+    width: 95%;
   }
 .about-txt {
-  max-width: 90%;
-  padding: 4% 0 4% 0;
+  width: 90%;
+  padding: 15% 0 4% 0;
 }
 }
 #about-h1 span, #about-h2 span {
@@ -698,7 +699,7 @@ ol {
   width: 100%;
 }
 .concept-txt {
-  width: 100%;
+  width: 80%;
   text-align: center;
   margin: 0 auto;
   padding: 2%;
@@ -730,6 +731,7 @@ ol {
   height: 40vh;
 }
 .concept-txt {
+  width: 95%;
   padding: 0;
 }
 }

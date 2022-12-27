@@ -129,9 +129,19 @@ const menuImgTitle2 = document.querySelector("#menuImgTitle2");
 const menuImgPrice2 = document.querySelector("#menuImgPrice2");
 const menuImgL2 = document.querySelector(".menu-img-left2");
 const menuTxt2_2 = document.querySelector("#menuTxt2_2");
+const menuImgText2 = document.querySelector("#menuImgText2");
+const menuImgPriceText2 = document.querySelector("#menuImgPriceText2");
 
 gsap.set([menuImgTitle2,menuImgPrice2], {
   width:"0%",
+});
+gsap.set(menuImgText2, {
+  xPercent: -100,
+  autoAlpha: 0,
+});
+gsap.set(menuImgPriceText2, {
+  xPercent: 100,
+  autoAlpha: 0,
 });
 gsap.set([menuTxt2_2], {
   autoAlpha: 0,
@@ -157,11 +167,23 @@ tlMenu2
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
+  .to(menuImgText2, {
+    xPercent: 0,
+    autoAlpha: 1,
+    ease: Power2.easeInOut,
+    duration: 1,
+  },"-=0.8")
     .to(menuImgPrice2, {
     width: "120px",
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
+    .to(menuImgPriceText2, {
+    xPercent: 0,
+    autoAlpha: 1,
+    ease: Power2.easeInOut,
+    duration: 1,
+  },"-=0.8")
   .to(
     [ menuTxt2_2],
     {
@@ -176,9 +198,19 @@ tlMenu2
 const menuImgPrice3 = document.querySelector("#menuImgPrice3");
 const menuImgL3 = document.querySelector(".menu-img-left3");
 const menuTxt3_2 = document.querySelector("#menuTxt3_2");
+const menuImgText3 = document.querySelector("#menuImgText3");
+const menuImgPriceText3 = document.querySelector("#menuImgPriceText3");
 
 gsap.set([menuImgTitle3,menuImgPrice3], {
   width:"0%",
+});
+gsap.set(menuImgText3, {
+  xPercent: -100,
+  autoAlpha: 0,
+});
+gsap.set(menuImgPriceText3, {
+  xPercent: 100,
+  autoAlpha: 0,
 });
 gsap.set([menuTxt3_2], {
   autoAlpha: 0,
@@ -204,11 +236,23 @@ tlMenu3
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
+  .to(menuImgText3, {
+    xPercent: 0,
+    autoAlpha: 1,
+    ease: Power2.easeInOut,
+    duration: 1,
+  },"-=0.8")
     .to(menuImgPrice3, {
     width: "120px",
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
+      .to(menuImgPriceText3, {
+    xPercent: 0,
+    autoAlpha: 1,
+    ease: Power2.easeInOut,
+    duration: 1,
+  },"-=0.8")
   .to(
     [ menuTxt3_2],
     {
