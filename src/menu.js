@@ -92,30 +92,30 @@ tlMenu
   .to([menuImgL], {
     width:"100%",
     ease: Power2.easeInOut,
-    duration: 1,
+    duration: 0.7,
   })
   .to(menuImgTitle1, {
     width: "180px",
     ease: Power2.easeInOut,
-    duration: 1,
+    duration: 0.7,
   },"-=0.5")
   .to(menuImgText1, {
     xPercent: 0,
     autoAlpha: 1,
     ease: Power2.easeInOut,
-    duration: 1,
-  },"-=0.8")
+    duration: 0.7,
+  },"-=0.5")
     .to(menuImgPrice1, {
     width: "160px",
     ease: Power2.easeInOut,
-    duration: 1,
+    duration: 0.7,
   },"-=0.5")
   .to(menuImgPriceText1, {
     xPercent: 0,
     autoAlpha: 1,
     ease: Power2.easeInOut,
-    duration: 1,
-  },"-=0.8")
+    duration: 0.7,
+  },"-=0.5")
   .to(
     [ menuTxt1_2],
     {
@@ -160,30 +160,30 @@ tlMenu2
   .to([menuImgL2], {
     width:"100%",
     ease: Power2.easeInOut,
-    duration: 1,
+    duration: 0.7,
   })
   .to(menuImgTitle2, {
     width: "180px",
     ease: Power2.easeInOut,
-    duration: 1,
+    duration: 0.7,
   },"-=0.5")
   .to(menuImgText2, {
     xPercent: 0,
     autoAlpha: 1,
     ease: Power2.easeInOut,
-    duration: 1,
-  },"-=0.8")
+    duration: 0.7,
+  },"-=0.5")
     .to(menuImgPrice2, {
     width: "160px",
     ease: Power2.easeInOut,
-    duration: 1,
+    duration: 0.7,
   },"-=0.5")
     .to(menuImgPriceText2, {
     xPercent: 0,
     autoAlpha: 1,
     ease: Power2.easeInOut,
-    duration: 1,
-  },"-=0.8")
+    duration: 0.7,
+  },"-=0.5")
   .to(
     [ menuTxt2_2],
     {
@@ -229,30 +229,30 @@ tlMenu3
   .to([menuImgL3], {
     width:"100%",
     ease: Power2.easeInOut,
-    duration: 1,
+    duration: 0.7,
   })
   .to(menuImgTitle3, {
     width: "180px",
     ease: Power2.easeInOut,
-    duration: 1,
+    duration: 0.7,
   },"-=0.5")
   .to(menuImgText3, {
     xPercent: 0,
     autoAlpha: 1,
     ease: Power2.easeInOut,
-    duration: 1,
-  },"-=0.8")
+    duration: 0.7,
+  },"-=0.5")
     .to(menuImgPrice3, {
     width: "160px",
     ease: Power2.easeInOut,
-    duration: 1,
+    duration: 0.7,
   },"-=0.5")
       .to(menuImgPriceText3, {
     xPercent: 0,
     autoAlpha: 1,
     ease: Power2.easeInOut,
-    duration: 1,
-  },"-=0.8")
+    duration: 0.7,
+  },"-=0.5")
   .to(
     [ menuTxt3_2],
     {
