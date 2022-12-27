@@ -106,7 +106,7 @@ tlMenu
     duration: 1,
   },"-=0.8")
     .to(menuImgPrice1, {
-    width: "120px",
+    width: "160px",
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
@@ -174,7 +174,7 @@ tlMenu2
     duration: 1,
   },"-=0.8")
     .to(menuImgPrice2, {
-    width: "120px",
+    width: "160px",
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
@@ -243,7 +243,7 @@ tlMenu3
     duration: 1,
   },"-=0.8")
     .to(menuImgPrice3, {
-    width: "120px",
+    width: "160px",
     ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
