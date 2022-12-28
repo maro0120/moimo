@@ -327,16 +327,11 @@ const tlConcept = gsap.timeline({
   },
 });
 tlConcept
-  .to([conceptImgCv1], {
-    xPercent:0,
-    ease: Power2.easeInOut,
-    duration: 1,
-  })
   .to([conceptImgL], {
     backgroundPositionX: "0",
     ease: Power2.easeInOut,
     duration: 1,
-  },"<")
+  })
   .to(conceptImgCv1, {
     width: "0%",
     ease: Power2.easeInOut,
@@ -355,8 +350,8 @@ const conceptImgR = document.querySelector(".concept-img-right");
 const conceptTxt2_1 = document.querySelector("#conceptTxt2_1");
 const conceptTxt2_2 = document.querySelector("#conceptTxt2_2");
 gsap.set(conceptImgCv2, {
-  autoAlpha: 0.95, //ここで初期状態を設定
-  xPercent: 100,
+  autoAlpha: 1, //ここで初期状態を設定
+  xPercent: 0,
 });
 gsap.set([conceptTxt2_1, conceptTxt2_2], {
   autoAlpha: 0, //ここで初期状態を設定
@@ -372,11 +367,6 @@ const tlConcept2 = gsap.timeline({
   },
 });
 tlConcept2
-  .to([conceptImgCv2,conceptImgR], {
-    xPercent:0,
-    ease: Power2.easeInOut,
-    duration: 1,
-  })
   .to([conceptImgR], {
     backgroundPositionX: "0",
     ease: Power2.easeInOut,
@@ -393,16 +383,13 @@ tlConcept2
       autoAlpha: 1, //ここでアニメーションさせたい内容を書く
       yPercent: 0,
     },
-    "<"
+    // "<"
   );
 const conceptImgCv3 = document.querySelector("#conceptImgCover3");
 const conceptImgL2 = document.querySelector(".concept-img-left2");
 const conceptTxt3_1 = document.querySelector("#conceptTxt3_1");
 const conceptTxt3_2 = document.querySelector("#conceptTxt3_2");
-gsap.set(conceptImgCv3, {
-  autoAlpha: 0.95, //ここで初期状態を設定
-  xPercent: -100,
-});
+const borderY3 = document.querySelector("#border-y_3");
 gsap.set([conceptTxt3_1, conceptTxt3_2], {
   autoAlpha: 0,
   yPercent: 100,
@@ -417,11 +404,6 @@ const tlConcept3 = gsap.timeline({
   },
 });
 tlConcept3
-  .to([conceptImgCv3,conceptImgL2], {
-    xPercent:0,
-    ease: Power2.easeInOut,
-    duration: 1,
-  })
   .to([conceptImgL2], {
     backgroundPositionX: "0",
     ease: Power2.easeInOut,
@@ -429,15 +411,32 @@ tlConcept3
   },"<")
   .to(conceptImgCv3, {
     width: "0%",
+    duration: 1,
   },"-=0.5")
   .to(
-    [conceptTxt3_1, conceptTxt3_2],
+    [conceptTxt3_1],
     {
       autoAlpha: 1, //ここでアニメーションさせたい内容を書く
       yPercent: 0,
     },
-    "<"
-  );
+    "-=0.5"
+  ).to(
+    borderY3,{
+      width: "100%",
+      duration: 1, 
+    },"-=0.2"
+    ).to(
+    borderY3,{
+      width: "0%",
+      left: "100%",
+      duration: 1, 
+    }
+    ).to(
+    [conceptTxt3_2],
+    {
+      autoAlpha: 1, //ここでアニメーションさせたい内容を書く
+      yPercent: 0,
+    },"-=1.5");
 
 //中間アニメーション
 const imgImoBox= document.querySelector(".img-box-imo");
