@@ -310,8 +310,8 @@ tlConcetTxt
       }},"<");
       
 gsap.set(conceptImgCv1, {
-  autoAlpha: 0.95, //ここで初期状態を設定
-  xPercent: -100,
+  autoAlpha: 1, //ここで初期状態を設定
+  xPercent: -0,
 });
 gsap.set([conceptTxt1_1, conceptTxt1_2], {
   autoAlpha: 0,
@@ -348,7 +348,7 @@ tlConcept
       autoAlpha: 1,
       yPercent: 0,
     },
-    "<"
+    // "<"
   );
 const conceptImgCv2 = document.querySelector("#conceptImgCover2");
 const conceptImgR = document.querySelector(".concept-img-right");
