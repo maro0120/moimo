@@ -253,6 +253,7 @@ const conceptImgCv1 = document.querySelector("#conceptImgCover1");
 const conceptImgL = document.querySelector(".concept-img-left");
 const conceptTxt1_1 = document.querySelector("#conceptTxt1_1");
 const conceptTxt1_2 = document.querySelector("#conceptTxt1_2");
+const borderY1 = document.querySelector("#border-y_1");
 
     const conceptH1 = document.querySelectorAll('#concept-h1');
     const conceptH2 = document.querySelectorAll('#concept-h2');
@@ -326,29 +327,45 @@ const tlConcept = gsap.timeline({
     start: "top center+=30%",
   },
 });
-tlConcept
+  tlConcept
   .to([conceptImgL], {
     backgroundPositionX: "0",
     ease: Power2.easeInOut,
     duration: 1,
-  })
+  },"<")
   .to(conceptImgCv1, {
     width: "0%",
-    ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
   .to(
-    [conceptTxt1_1, conceptTxt1_2],
+    [conceptTxt1_1],
     {
-      autoAlpha: 1,
+      autoAlpha: 1, //ここでアニメーションさせたい内容を書く
       yPercent: 0,
     },
-    // "<"
-  );
+    "-=0.5"
+  ).to(
+    borderY1,{
+      width: "100%",
+      duration: 1, 
+    },"-=0.2"
+    ).to(
+    borderY1,{
+      width: "0%",
+      left: "100%",
+      duration: 1, 
+    }
+    ).to(
+    [conceptTxt1_2],
+    {
+      autoAlpha: 1, //ここでアニメーションさせたい内容を書く
+      yPercent: 0,
+    },"-=1.5");
 const conceptImgCv2 = document.querySelector("#conceptImgCover2");
 const conceptImgR = document.querySelector(".concept-img-right");
 const conceptTxt2_1 = document.querySelector("#conceptTxt2_1");
 const conceptTxt2_2 = document.querySelector("#conceptTxt2_2");
+const borderY2 = document.querySelector("#border-y_2");
 gsap.set(conceptImgCv2, {
   autoAlpha: 1, //ここで初期状態を設定
   xPercent: 0,
@@ -366,7 +383,7 @@ const tlConcept2 = gsap.timeline({
     start: "top center+=30%",
   },
 });
-tlConcept2
+  tlConcept2
   .to([conceptImgR], {
     backgroundPositionX: "0",
     ease: Power2.easeInOut,
@@ -374,17 +391,32 @@ tlConcept2
   },"<")
   .to(conceptImgCv2, {
     width: "0%",
-    ease: Power2.easeInOut,
     duration: 1,
   },"-=0.5")
   .to(
-    [conceptTxt2_1, conceptTxt2_2],
+    [conceptTxt2_1],
     {
       autoAlpha: 1, //ここでアニメーションさせたい内容を書く
       yPercent: 0,
     },
-    // "<"
-  );
+    "-=0.5"
+  ).to(
+    borderY2,{
+      width: "100%",
+      duration: 1, 
+    },"-=0.2"
+    ).to(
+    borderY2,{
+      width: "0%",
+      left: "100%",
+      duration: 1, 
+    }
+    ).to(
+    [conceptTxt2_2],
+    {
+      autoAlpha: 1, //ここでアニメーションさせたい内容を書く
+      yPercent: 0,
+    },"-=1.5");
 const conceptImgCv3 = document.querySelector("#conceptImgCover3");
 const conceptImgL2 = document.querySelector(".concept-img-left2");
 const conceptTxt3_1 = document.querySelector("#conceptTxt3_1");

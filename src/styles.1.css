@@ -1162,23 +1162,26 @@ top: 48px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 4vw 100%);
   width: auto;
   height: 70vh;
-  background-image: url(../dist/assets/concept1.webp);
+  background-image: url(../dist/assets/purin.webp);
   background-size: cover;
+  background-position: center center;
 
 }
 .menu-img-left2 {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 4vw 100%);
   width: auto;
   height: 70vh;
-  background-image: url(../dist/assets/concept2.webp);
+  background-image: url(../dist/assets/imonburan.webp);
   background-size: cover;
+  background-position: center center;
 }
 .menu-img-left3 {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 4vw 100%);
   width: auto;
   height: 70vh;
-  background-image: url(../dist/assets/concept3.webp);
+  background-image: url(../dist/assets/brulee.webp);
   background-size: cover;
+  background-position: center center;
 }
 .menu-img-title {
   background-color: #0f0f0f;
