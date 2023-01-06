@@ -1,9 +1,10 @@
 /*@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");*/
 /*@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;500&display=swap");*/
-@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap");*/
 /*@import url('https://fonts.googleapis.com/css2?family=Rokkitt&display=swap');*/
 /*@import url('https://fonts.googleapis.com/css2?family=Rokkitt&family=Shippori+Mincho:wght@400;600&display=swap');*/
 /*@import url('https://fonts.googleapis.com/css2?family=Jost&family=Rokkitt&family=Klee+One:wght@400;600&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Murecho:wght@300;600&family=Rokkitt&display=swap');
 :root {
   --easing: cubic-bezier(0.2, 1, 0.2, 1);
   --transition: 0.8s var(--easing);
@@ -21,7 +22,7 @@
 
 html {
   /*font-family: Rokkitt, "Shippori Mincho", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;*/
-  font-family: Rokkitt, Klee One, YuGothic,"Yu Gothic","游ゴシック","游ゴシック体","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  font-family: Rokkitt, Murecho, YuGothic,"Yu Gothic","游ゴシック","游ゴシック体","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
   /*font-family: Rokkitt, MyYugothic, "游ゴシック Medium", YuGothic, AppleSystem, MySansSerif, MyHiragino, メイリオ, Meiryo, sans-serif;*/
   /*font-size: 62.5%;*/
   height: 100%;
@@ -1060,6 +1061,7 @@ top: 48px;
 .access-item {
   flex: 1;
   display: flex;
+
   justify-content: center;
   align-items: center;
 }
@@ -1079,6 +1081,10 @@ top: 48px;
 @media (min-width: 768px) {
   .access-container {
     flex-direction: row;
+  }
+  
+  .access-item{
+    width: 50%;
   }
 
   .access-item-txt {
@@ -1139,7 +1145,7 @@ top: 48px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10%;
+  margin-bottom: 20%;
 }
 .menu-container-left {
   width: 100%;
@@ -1195,7 +1201,6 @@ top: 48px;
   overflow: hidden;
 }
 .menu-img-price {
-  font-family:Jost;
   background-color: #0f0f0f;
   position: absolute;
   bottom: -10%;
@@ -1232,6 +1237,7 @@ top: 48px;
   width: 100%;
 }
 .menu-txt {
+  font-weight: normal;
   width: 100%;
   text-align: left;
   margin: 0 auto;
@@ -1414,4 +1420,76 @@ top: 48px;
     /*transform: translate(10%, -50%);*/
     width: 0;
     height: 1px;
+}
+
+
+.nouren-img-box-container {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  height: 70vh;
+  width: 100%;
+  margin: 0 0 5% 0;
+  overflow: hidden;
+}
+
+.nouren-wrapper {
+  background-color: var(--color-base);
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+  /*padding-bottom: 10%;*/
+}
+.nouren-title {
+  margin: 10% 0 5% 0;
+}
+
+#nouren-h1 span, #nouren-h2 span {
+  display: inline-block;
+}
+.nouren-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.nouren-img {
+  width: 30%;
+  margin: 5% 0 5% 0;
+}
+
+.nouren-lead-txt {
+  width: 55%;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nouren-txt {
+  text-align: left;
+  width: 70%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 5% 0 2% 0;
+}
+
+@media (max-width: 767px) {
+  .nouren-img {
+  width: 70%;
+}
+  .nouren-item-img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .nouren-lead-txt {
+    width: 95%;
+  }
+.nouren-txt {
+  width: 90%;
+  padding: 15% 0 4% 0;
+}
 }
