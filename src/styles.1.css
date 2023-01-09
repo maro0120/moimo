@@ -821,6 +821,7 @@ ol {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--color-base);
+  line-height: normal;
 }
 .product-img {
   object-fit: cover;
@@ -842,7 +843,7 @@ ol {
   z-index: 3;
 }
 .product-lnk::before {
-  top: 34px;
+  top: 30px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   content: "";
@@ -854,7 +855,7 @@ ol {
   transition: all 0.2s;
 }
 .product-lnk::after {
-  top: 48px;
+  top: 44px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   content: "";
@@ -934,7 +935,7 @@ ol {
   z-index: 3;
 }
 .shop-lnk::before {
-  top: 34px;
+  top: 30px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   content: "";
@@ -946,7 +947,7 @@ ol {
   transition: all 0.2s;
 }
 .shop-lnk::after {
-  top: 48px;
+  top: 44px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   content: "";
@@ -1025,7 +1026,7 @@ ol {
   z-index: 3;
 }
 .noufuku-lnk::before {
-  top: 34px;
+  top: 30px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   content: "";
@@ -1037,7 +1038,7 @@ ol {
   transition: all 0.2s;
 }
 .noufuku-lnk::after {
-  top: 48px;
+  top: 44px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   content: "";
@@ -1376,7 +1377,7 @@ section.menu_area {
   z-index: 3;
 }
 .back-lnk::before {
-  top: 34px;
+  top: 30px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   content: "";
@@ -1388,7 +1389,7 @@ section.menu_area {
   transition: all 0.2s;
 }
 .back-lnk::after {
-  top: 48px;
+  top: 44px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   content: "";
