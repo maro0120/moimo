@@ -21,6 +21,7 @@ jQuery(document).ready(function ($) {
     $(".global-nav").fadeToggle();
   });
 });
+
 // const svg = document.querySelector("#svg");
 // const img = document.querySelector("#img");
 // const circle = document.querySelector("#circle");
