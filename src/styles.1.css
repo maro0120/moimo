@@ -1122,13 +1122,32 @@ ol {
 #instagram-h2 span {
   display: inline-block;
 }
-
+.instagram-wrapper {
+  background-color: var(--color-base);
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 10%;
+}
+.instagram-title {
+  margin: 10% 0 10% 0;
+}
 .footer {
   position: relative;
   width: 100%;
   height: 30vh;
   background-color: var(--color-theme);
   clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0% 100%);
+}
+.footer-logo-wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  margin: auto;
+}
+.footer-logo {
+  width: 30vw;
 }
 .copyRight {
   position: absolute;
@@ -1139,7 +1158,11 @@ ol {
   .footer {
     clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0% 100%);
   }
+  .footer-logo {
+    width: 50vw;
+  }
 }
+
 
 .menu-img-box-container {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
@@ -1389,7 +1412,7 @@ section.menu_area {
   transition: all 0.2s;
 }
 .back-lnk::after {
-  top: 44px;
+  top: 45px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   content: "";
