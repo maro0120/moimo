@@ -670,7 +670,7 @@ ol {
   height: 70vh;
   background-image: url(../dist/assets/concept1.webp);
   background-size: cover;
-  transform: scale(1.4);
+  /* transform: scale(1.4); */
   background-position-x: -50px;
 }
 .concept-img-right {
@@ -678,7 +678,7 @@ ol {
   height: 70vh;
   background-image: url(../dist/assets/concept2.webp);
   background-size: cover;
-  transform: scale(1.4);
+  /* transform: scale(1.4); */
   background-position-x: 50px;
 }
 .concept-img-left2 {
@@ -686,7 +686,7 @@ ol {
   height: 70vh;
   background-image: url(../dist/assets/concept3.webp);
   background-size: cover;
-  transform: scale(1.4);
+  /* transform: scale(1.4); */
   background-position-x: -50px;
 }
 .concept-img-cover {
@@ -1139,7 +1139,7 @@ ol {
   background-color: var(--color-theme);
   clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0% 100%);
 }
-.footer-logo-wrapper{
+.footer-logo-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1162,7 +1162,6 @@ ol {
     width: 50vw;
   }
 }
-
 
 .menu-img-box-container {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
