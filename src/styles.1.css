@@ -668,7 +668,7 @@ ol {
 .concept-img-left {
   width: auto;
   height: 70vh;
-  background-image: url(../dist/assets/concept1.webp);
+  background-image: url(../concept1.webp);
   background-size: cover;
   /* transform: scale(1.4); */
   background-position-x: -50px;
@@ -676,7 +676,7 @@ ol {
 .concept-img-right {
   width: auto;
   height: 70vh;
-  background-image: url(../dist/assets/concept2.webp);
+  background-image: url(../concept2.webp);
   background-size: cover;
   /* transform: scale(1.4); */
   background-position-x: 50px;
@@ -684,7 +684,7 @@ ol {
 .concept-img-left2 {
   width: auto;
   height: 70vh;
-  background-image: url(../dist/assets/concept3.webp);
+  background-image: url(../concept3.webp);
   background-size: cover;
   /* transform: scale(1.4); */
   background-position-x: -50px;
