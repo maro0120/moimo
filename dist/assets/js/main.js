@@ -202,23 +202,7 @@ tll
     },
     "-=0.5"
   );
-//Goatアニメーション
-// const imgBox = document.querySelector(".img-box-goat");
-// gsap.set(imgBox, {
-//   // xPercent: 100,
-// });
-// const tlImgBox = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: imgBox,
-//     start: "top center+=30%",
-//   },
-// });
-// tlImgBox.to(imgBox, {
-//   backgroundPositionX: "50%",
-//   backgroundPositionY: "50%",
-//   ease: Power2.easeInOut,
-//   duration: 1.0,
-// });
+
 //Conceptアニメーション
 const conceptImgCv1 = document.querySelector("#conceptImgCover1");
 const conceptImgL = document.querySelector(".concept-img-left");
@@ -486,23 +470,7 @@ tlConcept3
     "-=1.5"
   );
 
-// //中間アニメーション
-// const imgImoBox = document.querySelector(".img-box-imo");
-// gsap.set(imgImoBox, {
-//   // xPercent: 100,
-// });
-// const tlImgImoBox = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: imgImoBox,
-//     start: "top center+=30%",
-//   },
-// });
-// tlImgImoBox.to(imgImoBox, {
-//   backgroundPositionX: "50%",
-//   backgroundPositionY: "50%",
-//   ease: Power2.easeInOut,
-//   duration: 1.0,
-// });
+
 // productアニメーション
 const productImgCv1 = document.querySelector("#productImgCover");
 const productH1 = document.querySelectorAll("#product-h1");
