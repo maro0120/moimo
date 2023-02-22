@@ -911,50 +911,51 @@ ol {
   height: 100%;
   filter: grayscale(80%);
 }
-.shop-lnk {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 50%;
-  left: 50%;
-  width: 200px;
-  height: 80px;
-  background-color: var(--color-theme);
-  transform: translate(-50%, -50%);
-  z-index: 3;
-}
-.shop-lnk::before {
-  top: 30px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  content: "";
-  position: absolute;
-  right: 18px;
-  width: 25px;
-  height: 5px;
-  background: #fff;
-  transition: all 0.2s;
-}
-.shop-lnk::after {
-  top: 44px;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  content: "";
-  position: absolute;
-  right: 18px;
-  width: 25px;
-  height: 5px;
-  background: #fff;
-  transition: all 0.2s;
-}
-.shop-lnk:hover::after,
-.shop-lnk:hover::before {
-  right: 10px;
-}
-.shop-lnk:hover {
-  background-color: var(--color-theme-compl);
-}
+/*20230222_現在準備中のためコメントアウト {*/
+/*.shop-lnk {*/
+/*  position: absolute;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  top: 50%;*/
+/*  left: 50%;*/
+/*  width: 200px;*/
+/*  height: 80px;*/
+/*  background-color: var(--color-theme);*/
+/*  transform: translate(-50%, -50%);*/
+/*  z-index: 3;*/
+/*}*/
+/*.shop-lnk::before {*/
+/*  top: 30px;*/
+/*  -webkit-transform: rotate(45deg);*/
+/*  transform: rotate(45deg);*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  right: 18px;*/
+/*  width: 25px;*/
+/*  height: 5px;*/
+/*  background: #fff;*/
+/*  transition: all 0.2s;*/
+/*}*/
+/*.shop-lnk::after {*/
+/*  top: 44px;*/
+/*  -webkit-transform: rotate(-45deg);*/
+/*  transform: rotate(-45deg);*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  right: 18px;*/
+/*  width: 25px;*/
+/*  height: 5px;*/
+/*  background: #fff;*/
+/*  transition: all 0.2s;*/
+/*}*/
+/*.shop-lnk:hover::after,*/
+/*.shop-lnk:hover::before {*/
+/*  right: 10px;*/
+/*}*/
+/*.shop-lnk:hover {*/
+/*  background-color: var(--color-theme-compl);*/
+/*}*/
 .shop-img-cover {
   background-color: var(--color-theme);
   position: absolute;
