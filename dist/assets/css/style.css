@@ -1209,7 +1209,7 @@ ol {
   height: 70vh;
   background-image: url(../purin.webp);
   background-size: cover;
-  background-position: center center;
+  background-position: center right;
 }
 .menu-img-left2 {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 4vw 100%);
@@ -1217,13 +1217,45 @@ ol {
   height: 70vh;
   background-image: url(../imonburan.webp);
   background-size: cover;
-  background-position: center center;
+  background-position: center right;
 }
 .menu-img-left3 {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 4vw 100%);
   width: auto;
   height: 70vh;
   background-image: url(../brulee.webp);
+  background-size: cover;
+  background-position: center right;
+}
+.menu-img-left4 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 4vw 100%);
+  width: auto;
+  height: 70vh;
+  background-image: url(../pie.webp);
+  background-size: cover;
+  background-position: center right;
+}
+.menu-img-left5 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 4vw 100%);
+  width: auto;
+  height: 70vh;
+  background-image: url(../puff.webp);
+  background-size: cover;
+  background-position: center right;
+}
+.menu-img-left6 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 4vw 100%);
+  width: auto;
+  height: 70vh;
+  background-image: url(../sweetpotato.webp);
+  background-size: cover;
+  background-position: center right;
+}
+.menu-img-left7 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 4vw 100%);
+  width: auto;
+  height: 70vh;
+  background-image: url(../chips.webp);
   background-size: cover;
   background-position: center center;
 }
@@ -1232,7 +1264,7 @@ ol {
   position: absolute;
   top: -10%;
   left: -3%;
-  width: 180px;
+  width: 320px;
   height: 60px;
   opacity: 0.95;
   text-align: center;
@@ -1310,7 +1342,11 @@ ol {
   }
   .menu-img-left,
   .menu-img-left2,
-  .menu-img-left3 {
+  .menu-img-left3,
+  .menu-img-left4,
+  .menu-img-left5,
+  .menu-img-left6,
+  .menu-img-left7 {
     height: 40vh;
   }
 }

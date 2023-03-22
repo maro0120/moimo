@@ -349,3 +349,340 @@ tlMenutMoreTxt.to(jsMenuMoreText, {
     ease: "sine.in",
   },
 });
+
+
+const menuImgTitle4 = document.querySelector("#menuImgTitle4");
+const menuImgPrice4 = document.querySelector("#menuImgPrice4");
+const menuImgL4 = document.querySelector(".menu-img-left4");
+const menuTxt4_2 = document.querySelector("#menuTxt4_2");
+const menuImgText4 = document.querySelector("#menuImgText4");
+const menuImgPriceText4 = document.querySelector("#menuImgPriceText4");
+
+gsap.set([menuImgTitle4, menuImgPrice4], {
+  width: "0%",
+});
+gsap.set(menuImgText4, {
+  xPercent: -100,
+  autoAlpha: 0,
+});
+gsap.set(menuImgPriceText4, {
+  xPercent: 100,
+  autoAlpha: 0,
+});
+gsap.set([menuTxt4_2], {
+  autoAlpha: 0,
+  yPercent: 100,
+});
+gsap.set(menuImgL4, {
+  width: "0%",
+});
+const tlMenu4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: menuImgTitle4,
+    start: "top center+=30%",
+  },
+});
+tlMenu3
+  .to([menuImgL4], {
+    width: "100%",
+    ease: Power2.easeInOut,
+    duration: 0.7,
+  })
+  .to(
+    menuImgTitle4,
+    {
+      width: "180px",
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    menuImgText4,
+    {
+      xPercent: 0,
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    menuImgPrice4,
+    {
+      width: "160px",
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    menuImgPriceText4,
+    {
+      xPercent: 0,
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    [menuTxt4_2],
+    {
+      autoAlpha: 1,
+      yPercent: 0,
+    },
+    "<"
+  );
+
+const menuImgTitle5 = document.querySelector("#menuImgTitle5");
+const menuImgPrice5 = document.querySelector("#menuImgPrice5");
+const menuImgL5 = document.querySelector(".menu-img-left5");
+const menuTxt5_2 = document.querySelector("#menuTxt5_2");
+const menuImgText5 = document.querySelector("#menuImgText5");
+const menuImgPriceText5 = document.querySelector("#menuImgPriceText5");
+
+gsap.set([menuImgTitle5, menuImgPrice5], {
+  width: "0%",
+});
+gsap.set(menuImgText5, {
+  xPercent: -100,
+  autoAlpha: 0,
+});
+gsap.set(menuImgPriceText5, {
+  xPercent: 100,
+  autoAlpha: 0,
+});
+gsap.set([menuTxt5_2], {
+  autoAlpha: 0,
+  yPercent: 100,
+});
+gsap.set(menuImgL5, {
+  width: "0%",
+});
+const tlMenu5 = gsap.timeline({
+  scrollTrigger: {
+    trigger: menuImgTitle5,
+    start: "top center+=30%",
+  },
+});
+tlMenu3
+  .to([menuImgL5], {
+    width: "100%",
+    ease: Power2.easeInOut,
+    duration: 0.7,
+  })
+  .to(
+    menuImgTitle5,
+    {
+      width: "280px",
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    menuImgText5,
+    {
+      xPercent: 0,
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    menuImgPrice5,
+    {
+      width: "160px",
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    menuImgPriceText5,
+    {
+      xPercent: 0,
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    [menuTxt5_2],
+    {
+      autoAlpha: 1,
+      yPercent: 0,
+    },
+    "<"
+  );
+  
+  const menuImgTitle6 = document.querySelector("#menuImgTitle6");
+const menuImgPrice6 = document.querySelector("#menuImgPrice6");
+const menuImgL6 = document.querySelector(".menu-img-left6");
+const menuTxt6_2 = document.querySelector("#menuTxt6_2");
+const menuImgText6 = document.querySelector("#menuImgText6");
+const menuImgPriceText6 = document.querySelector("#menuImgPriceText6");
+
+gsap.set([menuImgTitle6, menuImgPrice6], {
+  width: "0%",
+});
+gsap.set(menuImgText6, {
+  xPercent: -100,
+  autoAlpha: 0,
+});
+gsap.set(menuImgPriceText6, {
+  xPercent: 100,
+  autoAlpha: 0,
+});
+gsap.set([menuTxt6_2], {
+  autoAlpha: 0,
+  yPercent: 100,
+});
+gsap.set(menuImgL6, {
+  width: "0%",
+});
+const tlMenu6 = gsap.timeline({
+  scrollTrigger: {
+    trigger: menuImgTitle6,
+    start: "top center+=30%",
+  },
+});
+tlMenu3
+  .to([menuImgL6], {
+    width: "100%",
+    ease: Power2.easeInOut,
+    duration: 0.7,
+  })
+  .to(
+    menuImgTitle6,
+    {
+      width: "180px",
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    menuImgText6,
+    {
+      xPercent: 0,
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    menuImgPrice6,
+    {
+      width: "160px",
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    menuImgPriceText6,
+    {
+      xPercent: 0,
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    [menuTxt6_2],
+    {
+      autoAlpha: 1,
+      yPercent: 0,
+    },
+    "<"
+  );
+  
+  const menuImgTitle7 = document.querySelector("#menuImgTitle7");
+const menuImgPrice7 = document.querySelector("#menuImgPrice7");
+const menuImgL7 = document.querySelector(".menu-img-left7");
+const menuTxt7_2 = document.querySelector("#menuTxt7_2");
+const menuImgText7 = document.querySelector("#menuImgText7");
+const menuImgPriceText7 = document.querySelector("#menuImgPriceText7");
+
+gsap.set([menuImgTitle7, menuImgPrice7], {
+  width: "0%",
+});
+gsap.set(menuImgText7, {
+  xPercent: -100,
+  autoAlpha: 0,
+});
+gsap.set(menuImgPriceText7, {
+  xPercent: 100,
+  autoAlpha: 0,
+});
+gsap.set([menuTxt7_2], {
+  autoAlpha: 0,
+  yPercent: 100,
+});
+gsap.set(menuImgL7, {
+  width: "0%",
+});
+const tlMenu7 = gsap.timeline({
+  scrollTrigger: {
+    trigger: menuImgTitle7,
+    start: "top center+=30%",
+  },
+});
+tlMenu3
+  .to([menuImgL7], {
+    width: "100%",
+    ease: Power2.easeInOut,
+    duration: 0.7,
+  })
+  .to(
+    menuImgTitle7,
+    {
+      width: "320px",
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    menuImgText7,
+    {
+      xPercent: 0,
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    menuImgPrice7,
+    {
+      width: "160px",
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    menuImgPriceText7,
+    {
+      xPercent: 0,
+      autoAlpha: 1,
+      ease: Power2.easeInOut,
+      duration: 0.7,
+    },
+    "-=0.5"
+  )
+  .to(
+    [menuTxt7_2],
+    {
+      autoAlpha: 1,
+      yPercent: 0,
+    },
+    "<"
+  );
