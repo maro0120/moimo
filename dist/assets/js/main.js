@@ -1,71 +1,68 @@
 // SmoothScroll
-var scroll = new SmoothScroll('a[href*="#"]', {
+const smoothScroll = new SmoothScroll('a[href*="#"]', {
   easing: "easeOutQuint",
   speed: 700,
   header: "[data-scroll-header]",
 });
 document.addEventListener("touchstart", () => {
-  scroll.cancelScroll();
+  smoothScroll.cancelScroll();
 });
-
 //ヘッダーナビ
 jQuery(document).ready(function ($) {
-  $(".toggle-btn").on("click", function () {
-    $(".toggle-btn__line").toggleClass("active");
-    $(".global-nav").fadeToggle();
+  const toggleBtn = $(".toggle-btn");
+  const toggleLine = $(".toggle-btn__line");
+  const globalNav = $(".global-nav");
+  toggleBtn.on("click", function () {
+    toggleLine.toggleClass("active");
+    globalNav.fadeToggle();
   });
-});
-jQuery(document).ready(function ($) {
   $(".global-nav__item").on("click", function () {
-    $(".toggle-btn__line").toggleClass("active");
-    $(".global-nav").fadeToggle();
+    toggleLine.toggleClass("active");
+    globalNav.fadeToggle();
   });
 });
-
-
-window.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("li.l-gnav__item").forEach((element) => {
-    // 親要素に data-overwrite 属性が適用されているかで判断
-    const useFlag = element.parentElement.dataset.overwrite === "true";
-    const overwrite = useFlag ? "auto" : false;
-    element.addEventListener("mouseenter", () => {
-      gsap.to(element, {
-        scale: 1.2,
-        duration: 0.5,
-        overwrite,
-      });
+// マウスオーバーアニメーション
+const gnavItems = document.querySelectorAll("li.l-gnav__item");
+gnavItems.forEach((element) => {
+  const useFlag = element.parentElement.dataset.overwrite === "true";
+  const overwrite = useFlag ? "auto" : false;
+  const setScale = (scale) => {
+    gsap.to(element, {
+      scale,
+      duration: 0.5,
+      overwrite,
     });
-    element.addEventListener("mouseleave", () => {
-      gsap.to(element, {
-        scale: 1.0,
-        duration: 0.5,
-        overwrite,
-      });
-    });
+  };
+  element.addEventListener("mouseenter", () => {
+    setScale(1.2);
+  });
+  element.addEventListener("mouseleave", () => {
+    setScale(1.0);
   });
 });
+// スライダーアニメーション
 const myDelay = 7000;
 let timer;
 const switchAnimation = () => {
   clearTimeout(timer);
-  let activeSlide = document.querySelectorAll(".swiper-slide[class*=-active]");
-  for (let i = 0; i < activeSlide.length; i++) {
-    activeSlide[i].classList.remove("anm-finished");
-    activeSlide[i].classList.add("anm-started");
-  }
+  const activeSlides = document.querySelectorAll(".swiper-slide[class*=-active]");
+  activeSlides.forEach((slide) => {
+    slide.classList.remove("anm-finished");
+    slide.classList.add("anm-started");
+  });
   timer = setTimeout(() => {
-    for (let i = 0; i < activeSlide.length; i++) {
-      activeSlide[i].classList.remove("anm-started");
-      activeSlide[i].classList.add("anm-finished");
-    }
+    activeSlides.forEach((slide) => {
+      slide.classList.remove("anm-started");
+      slide.classList.add("anm-finished");
+    });
   }, myDelay - 1000);
 };
 const finishAnimation = () => {
-  let activeSlide = document.querySelectorAll(".swiper-slide.anm-started");
-  for (let i = 0; i < activeSlide.length; i++) {
-    activeSlide[i].classList.remove("anm-started");
-    activeSlide[i].classList.add("anm-finished");
-  }
+  const activeSlides = document.querySelectorAll(".swiper-slide.anm-started");
+  activeSlides.forEach((slide) => {
+    slide.classList.remove("anm-started");
+    slide.classList.add("anm-finished");
+  });
 };
 const mySwiper = new Swiper(".swiper", {
   effect: "fade",

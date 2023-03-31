@@ -5,8 +5,6 @@ const menuImgPrice1 = document.querySelector("#menuImgPrice1");
 const menuImgPriceText1 = document.querySelector("#menuImgPriceText1");
 
 const menuImgL = document.querySelector(".menu-img-left");
-const menuTxt1_1 = document.querySelector("#menuTxt1_1");
-const menuTxt1_2 = document.querySelector("#menuTxt1_2");
 
 const menuH1 = document.querySelectorAll("#menu-h1");
 const menuH2 = document.querySelectorAll("#menu-h2");
@@ -81,10 +79,6 @@ gsap.set(menuImgPriceText1, {
   xPercent: 100,
   autoAlpha: 0,
 });
-gsap.set([menuTxt1_2], {
-  autoAlpha: 0,
-  yPercent: 100,
-});
 gsap.set(menuImgL, {
   width: "0%",
 });
@@ -137,20 +131,11 @@ tlMenu
       duration: 0.7,
     },
     "-=0.5"
-  )
-  .to(
-    [menuTxt1_2],
-    {
-      autoAlpha: 1,
-      yPercent: 0,
-    },
-    "<"
   );
 
 const menuImgTitle2 = document.querySelector("#menuImgTitle2");
 const menuImgPrice2 = document.querySelector("#menuImgPrice2");
 const menuImgL2 = document.querySelector(".menu-img-left2");
-const menuTxt2_2 = document.querySelector("#menuTxt2_2");
 const menuImgText2 = document.querySelector("#menuImgText2");
 const menuImgPriceText2 = document.querySelector("#menuImgPriceText2");
 
@@ -164,10 +149,6 @@ gsap.set(menuImgText2, {
 gsap.set(menuImgPriceText2, {
   xPercent: 100,
   autoAlpha: 0,
-});
-gsap.set([menuTxt2_2], {
-  autoAlpha: 0,
-  yPercent: 100,
 });
 gsap.set(menuImgL2, {
   width: "0%",
@@ -221,20 +202,11 @@ tlMenu2
       duration: 0.7,
     },
     "-=0.5"
-  )
-  .to(
-    [menuTxt2_2],
-    {
-      autoAlpha: 1,
-      yPercent: 0,
-    },
-    "<"
   );
 
 const menuImgTitle3 = document.querySelector("#menuImgTitle3");
 const menuImgPrice3 = document.querySelector("#menuImgPrice3");
 const menuImgL3 = document.querySelector(".menu-img-left3");
-const menuTxt3_2 = document.querySelector("#menuTxt3_2");
 const menuImgText3 = document.querySelector("#menuImgText3");
 const menuImgPriceText3 = document.querySelector("#menuImgPriceText3");
 
@@ -248,10 +220,6 @@ gsap.set(menuImgText3, {
 gsap.set(menuImgPriceText3, {
   xPercent: 100,
   autoAlpha: 0,
-});
-gsap.set([menuTxt3_2], {
-  autoAlpha: 0,
-  yPercent: 100,
 });
 gsap.set(menuImgL3, {
   width: "0%",
@@ -305,14 +273,6 @@ tlMenu3
       duration: 0.7,
     },
     "-=0.5"
-  )
-  .to(
-    [menuTxt3_2],
-    {
-      autoAlpha: 1,
-      yPercent: 0,
-    },
-    "<"
   );
 
 const menuMoreH1 = document.querySelectorAll("#menu-more-h1");
@@ -354,7 +314,6 @@ tlMenutMoreTxt.to(jsMenuMoreText, {
 const menuImgTitle4 = document.querySelector("#menuImgTitle4");
 const menuImgPrice4 = document.querySelector("#menuImgPrice4");
 const menuImgL4 = document.querySelector(".menu-img-left4");
-const menuTxt4_2 = document.querySelector("#menuTxt4_2");
 const menuImgText4 = document.querySelector("#menuImgText4");
 const menuImgPriceText4 = document.querySelector("#menuImgPriceText4");
 
@@ -368,10 +327,6 @@ gsap.set(menuImgText4, {
 gsap.set(menuImgPriceText4, {
   xPercent: 100,
   autoAlpha: 0,
-});
-gsap.set([menuTxt4_2], {
-  autoAlpha: 0,
-  yPercent: 100,
 });
 gsap.set(menuImgL4, {
   width: "0%",
@@ -425,20 +380,11 @@ tlMenu3
       duration: 0.7,
     },
     "-=0.5"
-  )
-  .to(
-    [menuTxt4_2],
-    {
-      autoAlpha: 1,
-      yPercent: 0,
-    },
-    "<"
   );
 
 const menuImgTitle5 = document.querySelector("#menuImgTitle5");
 const menuImgPrice5 = document.querySelector("#menuImgPrice5");
 const menuImgL5 = document.querySelector(".menu-img-left5");
-const menuTxt5_2 = document.querySelector("#menuTxt5_2");
 const menuImgText5 = document.querySelector("#menuImgText5");
 const menuImgPriceText5 = document.querySelector("#menuImgPriceText5");
 
@@ -452,10 +398,6 @@ gsap.set(menuImgText5, {
 gsap.set(menuImgPriceText5, {
   xPercent: 100,
   autoAlpha: 0,
-});
-gsap.set([menuTxt5_2], {
-  autoAlpha: 0,
-  yPercent: 100,
 });
 gsap.set(menuImgL5, {
   width: "0%",
@@ -509,20 +451,11 @@ tlMenu3
       duration: 0.7,
     },
     "-=0.5"
-  )
-  .to(
-    [menuTxt5_2],
-    {
-      autoAlpha: 1,
-      yPercent: 0,
-    },
-    "<"
   );
   
-  const menuImgTitle6 = document.querySelector("#menuImgTitle6");
+const menuImgTitle6 = document.querySelector("#menuImgTitle6");
 const menuImgPrice6 = document.querySelector("#menuImgPrice6");
 const menuImgL6 = document.querySelector(".menu-img-left6");
-const menuTxt6_2 = document.querySelector("#menuTxt6_2");
 const menuImgText6 = document.querySelector("#menuImgText6");
 const menuImgPriceText6 = document.querySelector("#menuImgPriceText6");
 
@@ -536,10 +469,6 @@ gsap.set(menuImgText6, {
 gsap.set(menuImgPriceText6, {
   xPercent: 100,
   autoAlpha: 0,
-});
-gsap.set([menuTxt6_2], {
-  autoAlpha: 0,
-  yPercent: 100,
 });
 gsap.set(menuImgL6, {
   width: "0%",
@@ -593,20 +522,11 @@ tlMenu3
       duration: 0.7,
     },
     "-=0.5"
-  )
-  .to(
-    [menuTxt6_2],
-    {
-      autoAlpha: 1,
-      yPercent: 0,
-    },
-    "<"
   );
   
-  const menuImgTitle7 = document.querySelector("#menuImgTitle7");
+const menuImgTitle7 = document.querySelector("#menuImgTitle7");
 const menuImgPrice7 = document.querySelector("#menuImgPrice7");
 const menuImgL7 = document.querySelector(".menu-img-left7");
-const menuTxt7_2 = document.querySelector("#menuTxt7_2");
 const menuImgText7 = document.querySelector("#menuImgText7");
 const menuImgPriceText7 = document.querySelector("#menuImgPriceText7");
 
@@ -620,10 +540,6 @@ gsap.set(menuImgText7, {
 gsap.set(menuImgPriceText7, {
   xPercent: 100,
   autoAlpha: 0,
-});
-gsap.set([menuTxt7_2], {
-  autoAlpha: 0,
-  yPercent: 100,
 });
 gsap.set(menuImgL7, {
   width: "0%",
@@ -677,12 +593,4 @@ tlMenu3
       duration: 0.7,
     },
     "-=0.5"
-  )
-  .to(
-    [menuTxt7_2],
-    {
-      autoAlpha: 1,
-      yPercent: 0,
-    },
-    "<"
   );

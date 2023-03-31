@@ -1170,7 +1170,7 @@ ol {
   /*padding-bottom: 10%;*/
 }
 .menu-title {
-  margin: 10% 0 20% 0;
+  margin: 10% 0 5% 0;
 }
 
 #menu-h1 span,
@@ -1196,6 +1196,14 @@ ol {
   margin-top: -4vw;
   margin-bottom: -4vw;
   /*overflow: hidden;*/
+}
+
+.menu-lead-txt {
+  width: 70%;
+  text-align: left;
+  margin: 5% ;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .menu-img-container {
@@ -1331,6 +1339,9 @@ ol {
   }
   .menu-container {
     margin-bottom: 20%;
+  }
+  .menu-lead-txt {
+    width: 95%;
   }
   .menu-img-container {
     width: 100%;
